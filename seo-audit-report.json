@@ -1,0 +1,850 @@
+{
+  "generatedAt": "2026-11-10T00:10:29.402Z",
+  "siteFiles": {
+    "robotsTxt": false,
+    "sitemapXml": false,
+    "manifest": false
+  },
+  "httpChecks": {
+    "/": 200,
+    "/about/": 200,
+    "/work/": 200,
+    "/robots.txt": 404,
+    "/sitemap.xml": 404
+  },
+  "pages": [
+    {
+      "route": "/401/",
+      "title": "Protected page",
+      "desc": null,
+      "h1s": [],
+      "h2Count": 1,
+      "imgCount": 1,
+      "issues": [
+        {
+          "sev": "med",
+          "msg": "Title short (14 chars): \"Protected page\""
+        },
+        {
+          "sev": "high",
+          "msg": "Missing meta description"
+        },
+        {
+          "sev": "med",
+          "msg": "Missing canonical link"
+        },
+        {
+          "sev": "high",
+          "msg": "No H1"
+        },
+        {
+          "sev": "low",
+          "msg": "1 images with empty alt (ok if decorative)"
+        },
+        {
+          "sev": "med",
+          "msg": "Missing og:description"
+        },
+        {
+          "sev": "med",
+          "msg": "Missing og:image"
+        },
+        {
+          "sev": "low",
+          "msg": "Missing twitter:card"
+        },
+        {
+          "sev": "med",
+          "msg": "No JSON-LD structured data"
+        },
+        {
+          "sev": "med",
+          "msg": "No <main> landmark"
+        },
+        {
+          "sev": "low",
+          "msg": "No <nav> landmark"
+        },
+        {
+          "sev": "low",
+          "msg": "No <header> landmark"
+        },
+        {
+          "sev": "low",
+          "msg": "No <footer> landmark"
+        },
+        {
+          "sev": "low",
+          "msg": "No skip-to-content link"
+        },
+        {
+          "sev": "info",
+          "msg": "Still has Webflow data-wf-domain=two26.studio"
+        }
+      ],
+      "ok": [
+        "charset",
+        "viewport",
+        "lang=en",
+        "title",
+        "all imgs have alt attr",
+        "og:title"
+      ]
+    },
+    {
+      "route": "/404/",
+      "title": "Not Found",
+      "desc": null,
+      "h1s": [],
+      "h2Count": 1,
+      "imgCount": 1,
+      "issues": [
+        {
+          "sev": "med",
+          "msg": "Title short (9 chars): \"Not Found\""
+        },
+        {
+          "sev": "high",
+          "msg": "Missing meta description"
+        },
+        {
+          "sev": "med",
+          "msg": "Missing canonical link"
+        },
+        {
+          "sev": "high",
+          "msg": "No H1"
+        },
+        {
+          "sev": "low",
+          "msg": "1 images with empty alt (ok if decorative)"
+        },
+        {
+          "sev": "med",
+          "msg": "Missing og:description"
+        },
+        {
+          "sev": "med",
+          "msg": "Missing og:image"
+        },
+        {
+          "sev": "low",
+          "msg": "Missing twitter:card"
+        },
+        {
+          "sev": "med",
+          "msg": "No JSON-LD structured data"
+        },
+        {
+          "sev": "med",
+          "msg": "No <main> landmark"
+        },
+        {
+          "sev": "low",
+          "msg": "No <nav> landmark"
+        },
+        {
+          "sev": "low",
+          "msg": "No <header> landmark"
+        },
+        {
+          "sev": "low",
+          "msg": "No <footer> landmark"
+        },
+        {
+          "sev": "low",
+          "msg": "No skip-to-content link"
+        },
+        {
+          "sev": "info",
+          "msg": "Still has Webflow data-wf-domain=two26.studio"
+        }
+      ],
+      "ok": [
+        "charset",
+        "viewport",
+        "lang=en",
+        "title",
+        "all imgs have alt attr",
+        "og:title"
+      ]
+    },
+    {
+      "route": "/about/",
+      "title": "About Us - Two26 Studio | Boutique Design Studio",
+      "desc": "Two26 is a boutique design studio in Bucharest creating brands with strategy, personality and a healthy obsession for th…",
+      "h1s": [
+        "Small studio,",
+        "big brand energy"
+      ],
+      "h2Count": 15,
+      "imgCount": 19,
+      "issues": [
+        {
+          "sev": "med",
+          "msg": "Missing canonical link"
+        },
+        {
+          "sev": "med",
+          "msg": "Multiple H1 (2): Small studio, | big brand energy"
+        },
+        {
+          "sev": "low",
+          "msg": "18 images with empty alt (ok if decorative)"
+        },
+        {
+          "sev": "med",
+          "msg": "No JSON-LD structured data"
+        },
+        {
+          "sev": "low",
+          "msg": "No skip-to-content link"
+        },
+        {
+          "sev": "info",
+          "msg": "Still has Webflow data-wf-domain=two26.studio"
+        },
+        {
+          "sev": "info",
+          "msg": "Contact emails still two26.studio"
+        }
+      ],
+      "ok": [
+        "charset",
+        "viewport",
+        "lang=en",
+        "title",
+        "description",
+        "all imgs have alt attr",
+        "og:title",
+        "og:description",
+        "og:image",
+        "twitter:card",
+        "main",
+        "nav",
+        "header",
+        "footer"
+      ]
+    },
+    {
+      "route": "/",
+      "title": "Two26 Studio | Boutique Design Studio",
+      "desc": "Two26 is a boutique design studio in Bucharest creating brands with strategy, personality and a healthy obsession for th…",
+      "h1s": [
+        "LOOKING&nbsp;SUSPICIOUSLY GOOD"
+      ],
+      "h2Count": 9,
+      "imgCount": 30,
+      "issues": [
+        {
+          "sev": "med",
+          "msg": "Missing canonical link"
+        },
+        {
+          "sev": "high",
+          "msg": "1/30 images missing alt"
+        },
+        {
+          "sev": "low",
+          "msg": "29 images with empty alt (ok if decorative)"
+        },
+        {
+          "sev": "med",
+          "msg": "No JSON-LD structured data"
+        },
+        {
+          "sev": "low",
+          "msg": "No skip-to-content link"
+        },
+        {
+          "sev": "info",
+          "msg": "Still has Webflow data-wf-domain=two26.studio"
+        },
+        {
+          "sev": "info",
+          "msg": "Contact emails still two26.studio"
+        }
+      ],
+      "ok": [
+        "charset",
+        "viewport",
+        "lang=en",
+        "title",
+        "description",
+        "single H1",
+        "og:title",
+        "og:description",
+        "og:image",
+        "twitter:card",
+        "main",
+        "nav",
+        "header",
+        "footer"
+      ]
+    },
+    {
+      "route": "/work/bagel-bar/",
+      "title": "Work — Two26 Creative Studio",
+      "desc": "Visual identity, art direction, and brand design case study by Two26 creative studio.",
+      "h1s": [
+        "THE BAGEL BAR"
+      ],
+      "h2Count": 8,
+      "imgCount": 22,
+      "issues": [
+        {
+          "sev": "med",
+          "msg": "Title short (28 chars): \"Work — Two26 Creative Studio\""
+        },
+        {
+          "sev": "med",
+          "msg": "Missing canonical link"
+        },
+        {
+          "sev": "high",
+          "msg": "1/22 images missing alt"
+        },
+        {
+          "sev": "low",
+          "msg": "21 images with empty alt (ok if decorative)"
+        },
+        {
+          "sev": "med",
+          "msg": "Missing og:image"
+        },
+        {
+          "sev": "med",
+          "msg": "No JSON-LD structured data"
+        },
+        {
+          "sev": "low",
+          "msg": "No skip-to-content link"
+        },
+        {
+          "sev": "info",
+          "msg": "Still has Webflow data-wf-domain=two26.studio"
+        },
+        {
+          "sev": "info",
+          "msg": "Contact emails still two26.studio"
+        }
+      ],
+      "ok": [
+        "charset",
+        "viewport",
+        "lang=en",
+        "title",
+        "description",
+        "single H1",
+        "og:title",
+        "og:description",
+        "twitter:card",
+        "main",
+        "nav",
+        "header",
+        "footer"
+      ]
+    },
+    {
+      "route": "/work/heygluco/",
+      "title": "Work — Two26 Creative Studio",
+      "desc": "Visual identity, art direction, and brand design case study by Two26 creative studio.",
+      "h1s": [
+        "HeyGluco"
+      ],
+      "h2Count": 8,
+      "imgCount": 29,
+      "issues": [
+        {
+          "sev": "med",
+          "msg": "Title short (28 chars): \"Work — Two26 Creative Studio\""
+        },
+        {
+          "sev": "med",
+          "msg": "Missing canonical link"
+        },
+        {
+          "sev": "high",
+          "msg": "1/29 images missing alt"
+        },
+        {
+          "sev": "low",
+          "msg": "28 images with empty alt (ok if decorative)"
+        },
+        {
+          "sev": "med",
+          "msg": "Missing og:image"
+        },
+        {
+          "sev": "med",
+          "msg": "No JSON-LD structured data"
+        },
+        {
+          "sev": "low",
+          "msg": "No skip-to-content link"
+        },
+        {
+          "sev": "info",
+          "msg": "Still has Webflow data-wf-domain=two26.studio"
+        },
+        {
+          "sev": "info",
+          "msg": "Contact emails still two26.studio"
+        }
+      ],
+      "ok": [
+        "charset",
+        "viewport",
+        "lang=en",
+        "title",
+        "description",
+        "single H1",
+        "og:title",
+        "og:description",
+        "twitter:card",
+        "main",
+        "nav",
+        "header",
+        "footer"
+      ]
+    },
+    {
+      "route": "/work/",
+      "title": "Work - Two26 Studio | Boutique Design Studio",
+      "desc": "Two26 is a boutique design studio in Bucharest creating brands with strategy, personality and a healthy obsession for th…",
+      "h1s": [
+        "A few projects",
+        "to brag about"
+      ],
+      "h2Count": 22,
+      "imgCount": 44,
+      "issues": [
+        {
+          "sev": "med",
+          "msg": "Missing canonical link"
+        },
+        {
+          "sev": "med",
+          "msg": "Multiple H1 (2): A few projects | to brag about"
+        },
+        {
+          "sev": "high",
+          "msg": "1/44 images missing alt"
+        },
+        {
+          "sev": "low",
+          "msg": "43 images with empty alt (ok if decorative)"
+        },
+        {
+          "sev": "med",
+          "msg": "No JSON-LD structured data"
+        },
+        {
+          "sev": "low",
+          "msg": "No skip-to-content link"
+        },
+        {
+          "sev": "info",
+          "msg": "Still has Webflow data-wf-domain=two26.studio"
+        },
+        {
+          "sev": "info",
+          "msg": "Contact emails still two26.studio"
+        }
+      ],
+      "ok": [
+        "charset",
+        "viewport",
+        "lang=en",
+        "title",
+        "description",
+        "og:title",
+        "og:description",
+        "og:image",
+        "twitter:card",
+        "main",
+        "nav",
+        "header",
+        "footer"
+      ]
+    },
+    {
+      "route": "/work/lpi/",
+      "title": "Work — Two26 Creative Studio",
+      "desc": "Visual identity, art direction, and brand design case study by Two26 creative studio.",
+      "h1s": [
+        "LP ONE"
+      ],
+      "h2Count": 8,
+      "imgCount": 25,
+      "issues": [
+        {
+          "sev": "med",
+          "msg": "Title short (28 chars): \"Work — Two26 Creative Studio\""
+        },
+        {
+          "sev": "med",
+          "msg": "Missing canonical link"
+        },
+        {
+          "sev": "high",
+          "msg": "1/25 images missing alt"
+        },
+        {
+          "sev": "low",
+          "msg": "24 images with empty alt (ok if decorative)"
+        },
+        {
+          "sev": "med",
+          "msg": "Missing og:image"
+        },
+        {
+          "sev": "med",
+          "msg": "No JSON-LD structured data"
+        },
+        {
+          "sev": "low",
+          "msg": "No skip-to-content link"
+        },
+        {
+          "sev": "info",
+          "msg": "Still has Webflow data-wf-domain=two26.studio"
+        },
+        {
+          "sev": "info",
+          "msg": "Contact emails still two26.studio"
+        }
+      ],
+      "ok": [
+        "charset",
+        "viewport",
+        "lang=en",
+        "title",
+        "description",
+        "single H1",
+        "og:title",
+        "og:description",
+        "twitter:card",
+        "main",
+        "nav",
+        "header",
+        "footer"
+      ]
+    },
+    {
+      "route": "/work/merci/",
+      "title": "Work — Two26 Creative Studio",
+      "desc": "Visual identity, art direction, and brand design case study by Two26 creative studio.",
+      "h1s": [
+        "MERCI"
+      ],
+      "h2Count": 8,
+      "imgCount": 28,
+      "issues": [
+        {
+          "sev": "med",
+          "msg": "Title short (28 chars): \"Work — Two26 Creative Studio\""
+        },
+        {
+          "sev": "med",
+          "msg": "Missing canonical link"
+        },
+        {
+          "sev": "high",
+          "msg": "1/28 images missing alt"
+        },
+        {
+          "sev": "low",
+          "msg": "27 images with empty alt (ok if decorative)"
+        },
+        {
+          "sev": "med",
+          "msg": "Missing og:image"
+        },
+        {
+          "sev": "med",
+          "msg": "No JSON-LD structured data"
+        },
+        {
+          "sev": "low",
+          "msg": "No skip-to-content link"
+        },
+        {
+          "sev": "info",
+          "msg": "Still has Webflow data-wf-domain=two26.studio"
+        },
+        {
+          "sev": "info",
+          "msg": "Contact emails still two26.studio"
+        }
+      ],
+      "ok": [
+        "charset",
+        "viewport",
+        "lang=en",
+        "title",
+        "description",
+        "single H1",
+        "og:title",
+        "og:description",
+        "twitter:card",
+        "main",
+        "nav",
+        "header",
+        "footer"
+      ]
+    },
+    {
+      "route": "/work/munchies-and-cream/",
+      "title": "Work — Two26 Creative Studio",
+      "desc": "Visual identity, art direction, and brand design case study by Two26 creative studio.",
+      "h1s": [
+        "MUNCHIES AND CREAM"
+      ],
+      "h2Count": 8,
+      "imgCount": 25,
+      "issues": [
+        {
+          "sev": "med",
+          "msg": "Title short (28 chars): \"Work — Two26 Creative Studio\""
+        },
+        {
+          "sev": "med",
+          "msg": "Missing canonical link"
+        },
+        {
+          "sev": "high",
+          "msg": "1/25 images missing alt"
+        },
+        {
+          "sev": "low",
+          "msg": "24 images with empty alt (ok if decorative)"
+        },
+        {
+          "sev": "med",
+          "msg": "Missing og:image"
+        },
+        {
+          "sev": "med",
+          "msg": "No JSON-LD structured data"
+        },
+        {
+          "sev": "low",
+          "msg": "No skip-to-content link"
+        },
+        {
+          "sev": "info",
+          "msg": "Still has Webflow data-wf-domain=two26.studio"
+        },
+        {
+          "sev": "info",
+          "msg": "Contact emails still two26.studio"
+        }
+      ],
+      "ok": [
+        "charset",
+        "viewport",
+        "lang=en",
+        "title",
+        "description",
+        "single H1",
+        "og:title",
+        "og:description",
+        "twitter:card",
+        "main",
+        "nav",
+        "header",
+        "footer"
+      ]
+    },
+    {
+      "route": "/work/mvp/",
+      "title": "Work — Two26 Creative Studio",
+      "desc": "Visual identity, art direction, and brand design case study by Two26 creative studio.",
+      "h1s": [
+        "MVP"
+      ],
+      "h2Count": 8,
+      "imgCount": 25,
+      "issues": [
+        {
+          "sev": "med",
+          "msg": "Title short (28 chars): \"Work — Two26 Creative Studio\""
+        },
+        {
+          "sev": "med",
+          "msg": "Missing canonical link"
+        },
+        {
+          "sev": "high",
+          "msg": "1/25 images missing alt"
+        },
+        {
+          "sev": "low",
+          "msg": "24 images with empty alt (ok if decorative)"
+        },
+        {
+          "sev": "med",
+          "msg": "Missing og:image"
+        },
+        {
+          "sev": "med",
+          "msg": "No JSON-LD structured data"
+        },
+        {
+          "sev": "low",
+          "msg": "No skip-to-content link"
+        },
+        {
+          "sev": "info",
+          "msg": "Still has Webflow data-wf-domain=two26.studio"
+        },
+        {
+          "sev": "info",
+          "msg": "Contact emails still two26.studio"
+        }
+      ],
+      "ok": [
+        "charset",
+        "viewport",
+        "lang=en",
+        "title",
+        "description",
+        "single H1",
+        "og:title",
+        "og:description",
+        "twitter:card",
+        "main",
+        "nav",
+        "header",
+        "footer"
+      ]
+    },
+    {
+      "route": "/work/tanti-maria/",
+      "title": "Work — Two26 Creative Studio",
+      "desc": "Visual identity, art direction, and brand design case study by Two26 creative studio.",
+      "h1s": [
+        "TANTI MARIA"
+      ],
+      "h2Count": 8,
+      "imgCount": 25,
+      "issues": [
+        {
+          "sev": "med",
+          "msg": "Title short (28 chars): \"Work — Two26 Creative Studio\""
+        },
+        {
+          "sev": "med",
+          "msg": "Missing canonical link"
+        },
+        {
+          "sev": "high",
+          "msg": "1/25 images missing alt"
+        },
+        {
+          "sev": "low",
+          "msg": "24 images with empty alt (ok if decorative)"
+        },
+        {
+          "sev": "med",
+          "msg": "Missing og:image"
+        },
+        {
+          "sev": "med",
+          "msg": "No JSON-LD structured data"
+        },
+        {
+          "sev": "low",
+          "msg": "No skip-to-content link"
+        },
+        {
+          "sev": "info",
+          "msg": "Still has Webflow data-wf-domain=two26.studio"
+        },
+        {
+          "sev": "info",
+          "msg": "Contact emails still two26.studio"
+        }
+      ],
+      "ok": [
+        "charset",
+        "viewport",
+        "lang=en",
+        "title",
+        "description",
+        "single H1",
+        "og:title",
+        "og:description",
+        "twitter:card",
+        "main",
+        "nav",
+        "header",
+        "footer"
+      ]
+    },
+    {
+      "route": "/work/yum-yum/",
+      "title": "Work — Two26 Creative Studio",
+      "desc": "Visual identity, art direction, and brand design case study by Two26 creative studio.",
+      "h1s": [
+        "YUM YUM"
+      ],
+      "h2Count": 8,
+      "imgCount": 28,
+      "issues": [
+        {
+          "sev": "med",
+          "msg": "Title short (28 chars): \"Work — Two26 Creative Studio\""
+        },
+        {
+          "sev": "med",
+          "msg": "Missing canonical link"
+        },
+        {
+          "sev": "high",
+          "msg": "1/28 images missing alt"
+        },
+        {
+          "sev": "low",
+          "msg": "27 images with empty alt (ok if decorative)"
+        },
+        {
+          "sev": "med",
+          "msg": "Missing og:image"
+        },
+        {
+          "sev": "med",
+          "msg": "No JSON-LD structured data"
+        },
+        {
+          "sev": "low",
+          "msg": "No skip-to-content link"
+        },
+        {
+          "sev": "info",
+          "msg": "Still has Webflow data-wf-domain=two26.studio"
+        },
+        {
+          "sev": "info",
+          "msg": "Contact emails still two26.studio"
+        }
+      ],
+      "ok": [
+        "charset",
+        "viewport",
+        "lang=en",
+        "title",
+        "description",
+        "single H1",
+        "og:title",
+        "og:description",
+        "twitter:card",
+        "main",
+        "nav",
+        "header",
+        "footer"
+      ]
+    }
+  ]
+}

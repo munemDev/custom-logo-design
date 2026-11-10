@@ -1,0 +1,244 @@
+{
+  "/401": {
+    "headings": [
+      "Protected Page"
+    ],
+    "remoteLeft": 0,
+    "size": 12528,
+    "imgs": 1,
+    "videos": 0,
+    "lottie": 0
+  },
+  "/404": {
+    "headings": [
+      "Page Not Found"
+    ],
+    "remoteLeft": 0,
+    "size": 11393,
+    "imgs": 1,
+    "videos": 0,
+    "lottie": 0
+  },
+  "/about": {
+    "headings": [
+      "want to",
+      "start",
+      "a new",
+      "project?",
+      "Small studio,",
+      "big brand energy",
+      "Two ’90s kids, one shared itch to make better brands.",
+      "Less size, more scope",
+      "THIS IS PRETTY MUCH EVERYONE",
+      "Behind the work",
+      "Behind the work",
+      "THE BRIEF IS NOT SET IN STONE",
+      "GOOD IDEAS NEED SPACE",
+      "PRETTY IS NOT A STRATEGY",
+      "IF IT CAN BE SIMPLe, SIMPLIFY",
+      "WE’VE GOT RANGE",
+      "Okay, that's enough website"
+    ],
+    "remoteLeft": 0,
+    "size": 390516,
+    "imgs": 19,
+    "videos": 0,
+    "lottie": 0
+  },
+  "/": {
+    "headings": [
+      "want to",
+      "start",
+      "a new",
+      "project?",
+      "LOOKING SUSPICIOUSLY GOOD",
+      "Selected Works",
+      "THIS IS OUR THING",
+      "APPARENTLY, THEY LIKE US",
+      "THINGS YOU MIGHT ASK",
+      "Okay, that's enough website"
+    ],
+    "remoteLeft": 0,
+    "size": 324424,
+    "imgs": 30,
+    "videos": 3,
+    "lottie": 7
+  },
+  "/work/bagel-bar": {
+    "headings": [
+      "want to",
+      "start",
+      "a new",
+      "project?",
+      "THE BAGEL BAR",
+      "The Context",
+      "The Solution",
+      "More Works",
+      "Okay, that's enough website"
+    ],
+    "remoteLeft": 0,
+    "size": 188321,
+    "imgs": 22,
+    "videos": 0,
+    "lottie": 16
+  },
+  "/work/heygluco": {
+    "headings": [
+      "want to",
+      "start",
+      "a new",
+      "project?",
+      "HeyGluco",
+      "The Context",
+      "The Solution",
+      "More Works",
+      "Okay, that's enough website"
+    ],
+    "remoteLeft": 0,
+    "size": 195859,
+    "imgs": 29,
+    "videos": 0,
+    "lottie": 18
+  },
+  "/work": {
+    "headings": [
+      "want to",
+      "start",
+      "a new",
+      "project?",
+      "A few projects",
+      "to brag about",
+      "HeyGluco",
+      "HeyGluco",
+      "YUM YUM",
+      "YUM YUM",
+      "TANTI MARIA",
+      "TANTI MARIA",
+      "MUNCHIES AND CREAM",
+      "MUNCHIES AND CREAM",
+      "MVP",
+      "MVP",
+      "MERCI",
+      "MERCI",
+      "LP ONE",
+      "LP ONE",
+      "THE BAGEL BAR",
+      "THE BAGEL BAR",
+      "Selected Works",
+      "Okay, that's enough website"
+    ],
+    "remoteLeft": 0,
+    "size": 239200,
+    "imgs": 44,
+    "videos": 0,
+    "lottie": 0
+  },
+  "/work/lpi": {
+    "headings": [
+      "want to",
+      "start",
+      "a new",
+      "project?",
+      "LP ONE",
+      "The Context",
+      "The Solution",
+      "More Works",
+      "Okay, that's enough website"
+    ],
+    "remoteLeft": 0,
+    "size": 170897,
+    "imgs": 25,
+    "videos": 0,
+    "lottie": 8
+  },
+  "/work/merci": {
+    "headings": [
+      "want to",
+      "start",
+      "a new",
+      "project?",
+      "MERCI",
+      "The Context",
+      "The Solution",
+      "More Works",
+      "Okay, that's enough website"
+    ],
+    "remoteLeft": 0,
+    "size": 173004,
+    "imgs": 28,
+    "videos": 0,
+    "lottie": 8
+  },
+  "/work/munchies-and-cream": {
+    "headings": [
+      "want to",
+      "start",
+      "a new",
+      "project?",
+      "MUNCHIES AND CREAM",
+      "The Context",
+      "The Solution",
+      "More Works",
+      "Okay, that's enough website"
+    ],
+    "remoteLeft": 0,
+    "size": 175709,
+    "imgs": 25,
+    "videos": 0,
+    "lottie": 10
+  },
+  "/work/mvp": {
+    "headings": [
+      "want to",
+      "start",
+      "a new",
+      "project?",
+      "MVP",
+      "The Context",
+      "The Solution",
+      "More Works",
+      "Okay, that's enough website"
+    ],
+    "remoteLeft": 0,
+    "size": 178905,
+    "imgs": 25,
+    "videos": 0,
+    "lottie": 12
+  },
+  "/work/tanti-maria": {
+    "headings": [
+      "want to",
+      "start",
+      "a new",
+      "project?",
+      "TANTI MARIA",
+      "The Context",
+      "The Solution",
+      "More Works",
+      "Okay, that's enough website"
+    ],
+    "remoteLeft": 0,
+    "size": 167627,
+    "imgs": 25,
+    "videos": 0,
+    "lottie": 6
+  },
+  "/work/yum-yum": {
+    "headings": [
+      "want to",
+      "start",
+      "a new",
+      "project?",
+      "YUM YUM",
+      "The Context",
+      "The Solution",
+      "More Works",
+      "Okay, that's enough website"
+    ],
+    "remoteLeft": 0,
+    "size": 168525,
+    "imgs": 28,
+    "videos": 0,
+    "lottie": 4
+  }
+}

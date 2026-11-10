@@ -1,0 +1,13 @@
+{
+  "name": "two26-studio",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "npx --yes serve site -p 3000",
+    "start": "npx --yes serve site -p 3000",
+    "mirror": "node scripts/mirror-site.js",
+    "fix": "node scripts/fix-assets.js && node scripts/patch-paths.js",
+    "crawl": "node scripts/full-crawl.js && node scripts/repair-missing.js && node scripts/ensure-page-assets.js",
+    "verify": "node scripts/verify-local.js"
+  }
+}

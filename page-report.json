@@ -1,0 +1,191 @@
+{
+  "/": {
+    "bytes": 323714,
+    "headings": [
+      "h2: want to",
+      "h2: start",
+      "h2: a new",
+      "h2: project?",
+      "h1: LOOKING SUSPICIOUSLY GOOD",
+      "h2: Selected Works",
+      "h2: THIS IS OUR THING",
+      "h2: APPARENTLY, THEY LIKE US",
+      "h2: THINGS YOU MIGHT ASK",
+      "h2: Okay, that&#x27;s enough website"
+    ],
+    "assetCandidates": 105
+  },
+  "/work": {
+    "bytes": 238489,
+    "headings": [
+      "h2: want to",
+      "h2: start",
+      "h2: a new",
+      "h2: project?",
+      "h1: A few projects",
+      "h1: to brag about",
+      "h2: HeyGluco",
+      "h2: HeyGluco",
+      "h2: YUM YUM",
+      "h2: YUM YUM",
+      "h2: TANTI MARIA",
+      "h2: TANTI MARIA",
+      "h2: MUNCHIES AND CREAM",
+      "h2: MUNCHIES AND CREAM",
+      "h2: MVP",
+      "h2: MVP",
+      "h2: MERCI",
+      "h2: MERCI",
+      "h2: LP ONE",
+      "h2: LP ONE",
+      "h2: THE BAGEL BAR",
+      "h2: THE BAGEL BAR",
+      "h2: Selected Works",
+      "h2: Okay, that&#x27;s enough website"
+    ],
+    "assetCandidates": 119
+  },
+  "/about": {
+    "bytes": 388592,
+    "headings": [
+      "h2: want to",
+      "h2: start",
+      "h2: a new",
+      "h2: project?",
+      "h1: Small studio,",
+      "h1: big brand energy",
+      "h2: Two ’90s kids, one shared itch to make better brands.",
+      "h2: Less size, more scope",
+      "h2: THIS IS PRETTY MUCH EVERYONE",
+      "h2: Behind the work",
+      "h2: Behind the work",
+      "h2: THE BRIEF IS NOT SET IN STONE",
+      "h2: GOOD IDEAS NEED SPACE",
+      "h2: PRETTY IS NOT A STRATEGY",
+      "h2: IF IT CAN BE SIMPLe, SIMPLIFY",
+      "h2: WE’VE GOT RANGE",
+      "h2: Okay, that&#x27;s enough website"
+    ],
+    "assetCandidates": 62
+  },
+  "/work/heygluco": {
+    "bytes": 195452,
+    "headings": [
+      "h2: want to",
+      "h2: start",
+      "h2: a new",
+      "h2: project?",
+      "h1: HeyGluco",
+      "h2: The Context",
+      "h2: The Solution",
+      "h2: More Works",
+      "h2: Okay, that&#x27;s enough website"
+    ],
+    "assetCandidates": 68
+  },
+  "/work/bagel-bar": {
+    "bytes": 187916,
+    "headings": [
+      "h2: want to",
+      "h2: start",
+      "h2: a new",
+      "h2: project?",
+      "h1: THE BAGEL BAR",
+      "h2: The Context",
+      "h2: The Solution",
+      "h2: More Works",
+      "h2: Okay, that&#x27;s enough website"
+    ],
+    "assetCandidates": 65
+  },
+  "/work/tanti-maria": {
+    "bytes": 167224,
+    "headings": [
+      "h2: want to",
+      "h2: start",
+      "h2: a new",
+      "h2: project?",
+      "h1: TANTI MARIA",
+      "h2: The Context",
+      "h2: The Solution",
+      "h2: More Works",
+      "h2: Okay, that&#x27;s enough website"
+    ],
+    "assetCandidates": 62
+  },
+  "/work/munchies-and-cream": {
+    "bytes": 175308,
+    "headings": [
+      "h2: want to",
+      "h2: start",
+      "h2: a new",
+      "h2: project?",
+      "h1: MUNCHIES AND CREAM",
+      "h2: The Context",
+      "h2: The Solution",
+      "h2: More Works",
+      "h2: Okay, that&#x27;s enough website"
+    ],
+    "assetCandidates": 56
+  },
+  "/work/mvp": {
+    "bytes": 178503,
+    "headings": [
+      "h2: want to",
+      "h2: start",
+      "h2: a new",
+      "h2: project?",
+      "h1: MVP",
+      "h2: The Context",
+      "h2: The Solution",
+      "h2: More Works",
+      "h2: Okay, that&#x27;s enough website"
+    ],
+    "assetCandidates": 60
+  },
+  "/work/yum-yum": {
+    "bytes": 168120,
+    "headings": [
+      "h2: want to",
+      "h2: start",
+      "h2: a new",
+      "h2: project?",
+      "h1: YUM YUM",
+      "h2: The Context",
+      "h2: The Solution",
+      "h2: More Works",
+      "h2: Okay, that&#x27;s enough website"
+    ],
+    "assetCandidates": 83
+  },
+  "/work/merci": {
+    "bytes": 172600,
+    "headings": [
+      "h2: want to",
+      "h2: start",
+      "h2: a new",
+      "h2: project?",
+      "h1: MERCI",
+      "h2: The Context",
+      "h2: The Solution",
+      "h2: More Works",
+      "h2: Okay, that&#x27;s enough website"
+    ],
+    "assetCandidates": 63
+  },
+  "/work/lpi": {
+    "bytes": 170496,
+    "headings": [
+      "h2: want to",
+      "h2: start",
+      "h2: a new",
+      "h2: project?",
+      "h1: LP ONE",
+      "h2: The Context",
+      "h2: The Solution",
+      "h2: More Works",
+      "h2: Okay, that&#x27;s enough website"
+    ],
+    "assetCandidates": 60
+  }
+}

@@ -1,0 +1,205 @@
+{
+  "pages": {
+    "about/index.html": {
+      "headings": [
+        "want to",
+        "start",
+        "a new",
+        "project?",
+        "Small studio,",
+        "big brand energy",
+        "Two ’90s kids, one shared itch to make better brands.",
+        "Less size, more scope",
+        "THIS IS PRETTY MUCH EVERYONE",
+        "Behind the work",
+        "Behind the work",
+        "THE BRIEF IS NOT SET IN STONE",
+        "GOOD IDEAS NEED SPACE",
+        "PRETTY IS NOT A STRATEGY",
+        "IF IT CAN BE SIMPLe, SIMPLIFY",
+        "WE’VE GOT RANGE",
+        "Okay, that&#x27;s enough website"
+      ],
+      "missingRefs": 0,
+      "size": 388592
+    },
+    "index.html": {
+      "headings": [
+        "want to",
+        "start",
+        "a new",
+        "project?",
+        "LOOKING SUSPICIOUSLY GOOD",
+        "Selected Works",
+        "THIS IS OUR THING",
+        "APPARENTLY, THEY LIKE US",
+        "THINGS YOU MIGHT ASK",
+        "Okay, that&#x27;s enough website"
+      ],
+      "missingRefs": 14,
+      "size": 323684
+    },
+    "work/bagel-bar/index.html": {
+      "headings": [
+        "want to",
+        "start",
+        "a new",
+        "project?",
+        "THE BAGEL BAR",
+        "The Context",
+        "The Solution",
+        "More Works",
+        "Okay, that&#x27;s enough website"
+      ],
+      "missingRefs": 6,
+      "size": 187916
+    },
+    "work/heygluco/index.html": {
+      "headings": [
+        "want to",
+        "start",
+        "a new",
+        "project?",
+        "HeyGluco",
+        "The Context",
+        "The Solution",
+        "More Works",
+        "Okay, that&#x27;s enough website"
+      ],
+      "missingRefs": 11,
+      "size": 195452
+    },
+    "work/index.html": {
+      "headings": [
+        "want to",
+        "start",
+        "a new",
+        "project?",
+        "A few projects",
+        "to brag about",
+        "HeyGluco",
+        "HeyGluco",
+        "YUM YUM",
+        "YUM YUM",
+        "TANTI MARIA",
+        "TANTI MARIA",
+        "MUNCHIES AND CREAM",
+        "MUNCHIES AND CREAM",
+        "MVP",
+        "MVP",
+        "MERCI",
+        "MERCI",
+        "LP ONE",
+        "LP ONE",
+        "THE BAGEL BAR",
+        "THE BAGEL BAR",
+        "Selected Works",
+        "Okay, that&#x27;s enough website"
+      ],
+      "missingRefs": 13,
+      "size": 238489
+    },
+    "work/lpi/index.html": {
+      "headings": [
+        "want to",
+        "start",
+        "a new",
+        "project?",
+        "LP ONE",
+        "The Context",
+        "The Solution",
+        "More Works",
+        "Okay, that&#x27;s enough website"
+      ],
+      "missingRefs": 4,
+      "size": 170496
+    },
+    "work/merci/index.html": {
+      "headings": [
+        "want to",
+        "start",
+        "a new",
+        "project?",
+        "MERCI",
+        "The Context",
+        "The Solution",
+        "More Works",
+        "Okay, that&#x27;s enough website"
+      ],
+      "missingRefs": 4,
+      "size": 172600
+    },
+    "work/munchies-and-cream/index.html": {
+      "headings": [
+        "want to",
+        "start",
+        "a new",
+        "project?",
+        "MUNCHIES AND CREAM",
+        "The Context",
+        "The Solution",
+        "More Works",
+        "Okay, that&#x27;s enough website"
+      ],
+      "missingRefs": 4,
+      "size": 175308
+    },
+    "work/mvp/index.html": {
+      "headings": [
+        "want to",
+        "start",
+        "a new",
+        "project?",
+        "MVP",
+        "The Context",
+        "The Solution",
+        "More Works",
+        "Okay, that&#x27;s enough website"
+      ],
+      "missingRefs": 4,
+      "size": 178503
+    },
+    "work/tanti-maria/index.html": {
+      "headings": [
+        "want to",
+        "start",
+        "a new",
+        "project?",
+        "TANTI MARIA",
+        "The Context",
+        "The Solution",
+        "More Works",
+        "Okay, that&#x27;s enough website"
+      ],
+      "missingRefs": 4,
+      "size": 167224
+    },
+    "work/yum-yum/index.html": {
+      "headings": [
+        "want to",
+        "start",
+        "a new",
+        "project?",
+        "YUM YUM",
+        "The Context",
+        "The Solution",
+        "More Works",
+        "Okay, that&#x27;s enough website"
+      ],
+      "missingRefs": 4,
+      "size": 168120
+    }
+  },
+  "stillMissing": [
+    "/assets/cdn_prod_website-files_com/6aaad679fdb9d914f7f52049/6ab263498b14a38a7a109afc_Shot",
+    "/assets/cdn_prod_website-files_com/6aaad679fdb9d914f7f52049/6ab2633da8fa39ec5216880b_Shot",
+    "/assets/cdn_prod_website-files_com/6aaad679fdb9d914f7f52049/6ab2633d3e5b6a35a15d74d7_Shot",
+    "/assets/cdn_prod_website-files_com/6aaad679fdb9d914f7f52049/6ab2634dc8995221637e120c_Shot",
+    "/assets/cdn_prod_website-files_com/6aaad679fdb9d914f7f5203c/6ab2675e0b996d1415be46a3_The",
+    "/assets/cdn_prod_website-files_com/6aaad679fdb9d914f7f5203c/6ab266e293685f22fedc573a_Tanti",
+    "/assets/cdn_prod_website-files_com/6aaad679fdb9d914f7f5203c/6ab26718a85417b42d23712f_Munchies",
+    "/assets/cdn_prod_website-files_com/6aaad679fdb9d914f7f5203c/6ab391a7175b4ccd0e8c2c99_cover",
+    "/assets/cdn_prod_website-files_com/6aaad679fdb9d914f7f5203c/6ab38e4c47df4db39f2476ae_Gluco"
+  ],
+  "downloaded": 0
+}
