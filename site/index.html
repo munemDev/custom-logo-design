@@ -13,14 +13,12 @@
   <meta
     content="Logo Design is a boutique design studio in Bucharest creating brands with strategy, personality and a healthy obsession for the details."
     property="og:description" />
-  <meta content="/assets/cdn_prod_website-files_com/6aaad679fdb9d914f7f52049/6aacffa1e7b44d6c40b6bd60_preview.png"
-    property="og:image" />
   <meta content="Logo Design | Boutique Design Studio" name="twitter:title" />
   <meta
     content="Logo Design is a boutique design studio in Bucharest creating brands with strategy, personality and a healthy obsession for the details."
     name="twitter:description" />
   <meta property="og:type" content="website" />
-  <meta content="summary_large_image" name="twitter:card" />
+  <meta content="summary" name="twitter:card" />
   <meta content="width=device-width, initial-scale=1" name="viewport" />
   <meta content="Webflow" name="generator" />
   <link
@@ -41,10 +39,15 @@
   <link href="/assets/cdn_prod_website-files_com/6aaad679fdb9d914f7f52049/6aacf080c64ccb6375b45d05_fav1.jpg" rel="icon"
     type="image/png" sizes="512x512" />
   <style id="hero-search-input-css">
+    .section-hero-wrapper {
+      padding-top: clamp(8.5em, 14vw, 11em) !important;
+    }
+
     .hero-text {
       z-index: 80;
       max-width: min(90em, 98vw);
       position: relative;
+      margin-top: 0.75em;
     }
 
     .hero-text .heading {
@@ -81,6 +84,10 @@
       padding: 0.28em 0.28em 0.28em 0.85em;
       box-sizing: border-box;
     }
+    form.hero-search-wrap {
+      -webkit-appearance: none;
+      appearance: none;
+    }
 
     .hero-search-wrap:focus-within {
       border-color: #ff5400;
@@ -94,14 +101,19 @@
 
     .hero-search-pencil {
       flex: 0 0 auto;
-      width: 1.15em;
-      height: 1.15em;
+      width: 1.45em;
+      height: 1.45em;
       color: #ff5400;
       display: inline-flex;
       align-items: center;
       justify-content: center;
       pointer-events: none;
-      transition: color .2s ease, transform .25s ease;
+      filter: drop-shadow(0 2px 4px rgba(255, 84, 0, 0.28));
+      transition: color .2s ease, transform .25s ease, filter .25s ease;
+    }
+
+    .hero-search-wrap:focus-within .hero-search-pencil {
+      filter: drop-shadow(0 3px 8px rgba(255, 84, 0, 0.4));
     }
 
     .hero-search-pencil svg {
@@ -292,8 +304,22 @@
     @import url("https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&display=swap");
 
     .header {
-      position: relative;
-      z-index: 50;
+      position: fixed;
+      inset: 0 0 auto 0;
+      width: 100%;
+      z-index: 99999 !important;
+      background: transparent;
+      pointer-events: none;
+    }
+
+    .header .navbar-wrap,
+    .header a,
+    .header button {
+      pointer-events: auto;
+    }
+
+    .body {
+      background-color: #fae3e2 !important;
     }
 
     .navbar-wrap {
@@ -302,15 +328,17 @@
       padding: 0.7rem 0.85rem !important;
       align-items: center !important;
       gap: 0.75rem !important;
-      background: rgba(253, 248, 245, 0.78) !important;
-      border: 1px solid rgba(255, 84, 0, 0.14) !important;
+      background: rgba(255, 250, 247, 0.42) !important;
+      border: 1px solid rgba(255, 255, 255, 0.55) !important;
       border-radius: 999px !important;
-      backdrop-filter: blur(16px) saturate(1.2);
-      -webkit-backdrop-filter: blur(16px) saturate(1.2);
+      backdrop-filter: blur(22px) saturate(1.45);
+      -webkit-backdrop-filter: blur(22px) saturate(1.45);
       box-shadow:
-        0 10px 30px rgba(15, 40, 38, 0.06),
-        0 1px 0 rgba(255, 255, 255, 0.75) inset !important;
+        0 12px 36px rgba(15, 40, 38, 0.08),
+        0 1px 0 rgba(255, 255, 255, 0.85) inset,
+        inset 0 -1px 0 rgba(255, 84, 0, 0.06) !important;
       animation: navBarIn 0.7s cubic-bezier(.22, 1, .36, 1) both;
+      isolation: isolate;
     }
 
     @keyframes navBarIn {
@@ -350,16 +378,19 @@
 
     .navbar-logo .brand-wordmark,
     .header .brand-wordmark {
-      font-family: "Syne", var(--font-primary), Impact, sans-serif !important;
-      font-weight: 800 !important;
-      font-size: clamp(1.05rem, 1.7vw, 1.55rem) !important;
-      letter-spacing: 0.01em !important;
+      font-family: var(--font-primary), "Mdnichrometest", Impact, sans-serif !important;
+      font-weight: 700 !important;
+      font-size: clamp(1.05rem, 1.85vw, 1.65rem) !important;
+      letter-spacing: -0.02em !important;
+      text-transform: uppercase !important;
       color: var(--brand-primary, #ff5400) !important;
       -webkit-text-fill-color: var(--brand-primary, #ff5400) !important;
       background: none !important;
       -webkit-background-clip: initial;
       background-clip: initial;
       position: relative;
+      line-height: 1 !important;
+      white-space: nowrap;
     }
 
     .navbar-link-btn {
@@ -449,6 +480,17 @@
 
       .navbar-timing {
         display: none !important;
+      }
+
+      .navbar-logo {
+        min-width: 0 !important;
+        flex: 1 1 auto;
+      }
+
+      .navbar-logo .brand-wordmark,
+      .header .brand-wordmark {
+        font-size: clamp(0.95rem, 4.6vw, 1.25rem) !important;
+        letter-spacing: -0.025em !important;
       }
     }
   </style>
@@ -821,7 +863,7 @@
                 })();
               </script>
             </div>
-          </a></div><a href="/" aria-current="page" class="navbar-logo w-inline-block w--current"><span
+          </a><a href="/pricing" class="navbar-link-btn w-inline-block"><div class="navlink-text">Pricing</div></a></div><a href="/" aria-current="page" class="navbar-logo w-inline-block w--current"><span
             class="brand-wordmark">Logo Design</span></a>
         <div class="navbar-right">
           <div class="navbar-timing">Monday–Friday 10:00 – 17:00</div>
@@ -1567,7 +1609,7 @@
                   })();
                 </script>
               </div>
-            </a>
+            </a><a href="/pricing" class="navbar-link-btn w-inline-block"><div class="navlink-text">Pricing</div></a>
             <div class="ham-cta"><a data-wf--cta-btn--variant="base" href="#" class="cta-btn w-inline-block">
                 <div class="cta-text">Let&#x27;s Talk</div>
                 <div class="cta-btn-arrow">
@@ -3029,14 +3071,27 @@
             <div class="hero-pill three">
               <div class="hero-pill-text">No funny business</div>
             </div>
-            <div class="hero-search-wrap"><span class="hero-search-pencil" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.862 3.487a1.75 1.75 0 0 1 2.475 0l1.176 1.176a1.75 1.75 0 0 1 0 2.475L9.31 18.341a2 2 0 0 1-.9.51l-3.39.848a.75.75 0 0 1-.91-.91l.848-3.39a2 2 0 0 1 .51-.9L16.862 3.487Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M15.2 5.15 18.85 8.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M4.5 20.25h15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span><input class="hero-search-input" type="text" name="q"
-                placeholder="Search projects, brands, ideas…" autocomplete="off" /><button class="hero-search-btn"
-                type="button" aria-label="Get My Custom Logo"><span class="hero-search-btn-label">Get My Custom
+            <form class="hero-search-wrap" id="hero-brief-form" action="/brief/" method="get"><span class="hero-search-pencil" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M227.31,73.37,182.63,28.68a16,16,0,0,0-22.63,0L36.69,152A15.86,15.86,0,0,0,32,163.31V208a16,16,0,0,0,16,16H92.69A15.86,15.86,0,0,0,104,219.31L227.31,96a16,16,0,0,0,0-22.63ZM51.31,160,136,75.31,152.69,92,68,176.68ZM48,208V179.31L76.69,208Zm48,0L79.31,191,164,106.35,180.68,123ZM192,108.68,147.31,64l24-24L216,84.68Z"/></svg></span><input class="hero-search-input" type="text" name="name"
+                placeholder="Enter your company / business name" autocomplete="organization" /><button class="hero-search-btn"
+                type="submit" aria-label="Get My Custom Logo"><span class="hero-search-btn-label">Get My Custom
                   Logo</span><span class="hero-search-btn-icon" aria-hidden="true"><svg viewBox="0 0 10 10" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path d="M1.5 8.5L8.5 1.5M8.5 1.5H3M8.5 1.5V7" stroke="white" stroke-width="1.6"
                       stroke-linecap="round" stroke-linejoin="round" />
-                  </svg></span></button></div>
+                  </svg></span></button></form>
+            <script>
+              (function () {
+                var form = document.getElementById("hero-brief-form");
+                if (!form) return;
+                form.addEventListener("submit", function (e) {
+                  e.preventDefault();
+                  var input = form.querySelector('input[name="name"]');
+                  var name = input && input.value ? input.value.trim() : "";
+                  var url = "/brief/" + (name ? ("?name=" + encodeURIComponent(name)) : "");
+                  window.location.href = url;
+                });
+              })();
+            </script>
           </div>
           <div class="hero-banner-showcase">
             <section data-marquee-speed="3" class="section-slider-showcase hero-inline-showcase">
@@ -4470,7 +4525,6 @@
         </div>
         <div class="section-projects-wrapper">
           <div class="section-projects-header">
-            <div class="section-about-text">Featured Projects</div>
             <div class="section-heading-wrapper">
               <h2 class="section-heading less-max-w">Selected Works</h2>
             </div>
@@ -4876,7 +4930,510 @@
           </div>
         </div>
       </section>
-      <section class="section-services">
+      <section class="section-pricing" id="pricing" aria-label="Pricing">
+        <style id="pricing-section-css">
+          .section-pricing {
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            background:
+              radial-gradient(ellipse 80% 55% at 12% 0%, rgba(255,84,0,0.18), transparent 55%),
+              radial-gradient(ellipse 60% 50% at 92% 100%, rgba(255,84,0,0.12), transparent 50%),
+              linear-gradient(180deg, #fae3e2 0%, #f8eee8 48%, #f3e4dc 100%);
+            color: #111;
+            padding: clamp(4.5em, 9vw, 8em) 1.25em;
+            box-sizing: border-box;
+          }
+          .section-pricing::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image:
+              radial-gradient(rgba(255,84,0,0.07) 1px, transparent 1px);
+            background-size: 22px 22px;
+            mask-image: radial-gradient(ellipse 75% 65% at 50% 40%, #000 15%, transparent 75%);
+            pointer-events: none;
+            opacity: 0.9;
+          }
+          .section-pricing-inner {
+            width: min(1160px, 100%);
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+          }
+          .section-pricing .pricing-header {
+            text-align: center;
+            margin-bottom: clamp(1.75em, 4vw, 2.5em);
+          }
+          .section-pricing .pricing-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45em;
+            font-family: var(--font-secondary), "Neuemontreal", sans-serif;
+            font-size: 0.82em;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #ff5400;
+            margin-bottom: 1em;
+            padding: 0.5em 1em;
+            border: 2px solid rgba(255,84,0,0.35);
+            border-radius: 999px;
+            background: rgba(255,255,255,0.72);
+            box-shadow: 0 8px 20px rgba(255,84,0,0.1);
+          }
+          .section-pricing .pricing-eyebrow::before {
+            content: "";
+            width: 0.55em;
+            height: 0.55em;
+            border-radius: 50%;
+            background: #ff5400;
+            box-shadow: 0 0 0 4px rgba(255,84,0,0.18);
+          }
+          .section-pricing .pricing-heading {
+            font-family: var(--font-primary), "Mdnichrometest", Impact, sans-serif;
+            font-size: clamp(2.4rem, 5.8vw, 4.4rem);
+            line-height: 0.92;
+            letter-spacing: -0.035em;
+            font-weight: 700;
+            color: #111;
+            margin: 0 0 0.55em;
+            text-wrap: balance;
+          }
+          .section-pricing .pricing-lead {
+            margin: 0 auto;
+            max-width: 34em;
+            font-family: var(--font-secondary), "Neuemontreal", sans-serif;
+            font-size: 1.02em;
+            line-height: 1.45;
+            color: rgba(17,17,17,0.58);
+          }
+          .pricing-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.55em;
+            margin: 0 auto 1.85em;
+            padding: 0.4em;
+            width: fit-content;
+            max-width: 100%;
+            background: rgba(255,255,255,0.55);
+            border: 2px solid rgba(17,17,17,0.08);
+            border-radius: 999px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: 0 10px 28px rgba(255,84,0,0.08);
+          }
+          .pricing-tab {
+            appearance: none;
+            border: 1.5px solid transparent;
+            background: transparent;
+            color: rgba(17,17,17,0.62);
+            border-radius: 999px;
+            padding: 0.72em 1.15em;
+            font-family: var(--font-secondary), "Neuemontreal", sans-serif;
+            font-size: 0.84em;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background .25s ease, color .25s ease, border-color .25s ease, transform .25s ease, box-shadow .25s ease;
+          }
+          .pricing-tab:hover {
+            transform: translateY(-1px);
+            color: #111;
+            background: rgba(255,84,0,0.08);
+          }
+          .pricing-tab.is-active {
+            background: #ff5400;
+            border-color: transparent;
+            color: #fff;
+            box-shadow: 0 8px 20px rgba(255,84,0,0.28);
+          }
+          .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 1rem;
+            align-items: stretch;
+          }
+          .pricing-grid.is-3 {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            max-width: 980px;
+            margin-inline: auto;
+          }
+          .pricing-card {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            border-radius: 1.35em;
+            padding: 1.55em 1.25em 1.3em;
+            box-sizing: border-box;
+            min-height: 100%;
+            border: 1px solid rgba(17,17,17,0.08);
+            background: linear-gradient(165deg, #fffdfb 0%, #fff7f2 100%);
+            color: #111;
+            box-shadow: 0 12px 28px rgba(17,17,17,0.06);
+            transition: transform 0.35s cubic-bezier(.22,1,.36,1), box-shadow 0.35s ease, background 0.3s ease, border-color 0.3s ease;
+          }
+          .pricing-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(255,84,0,0.28);
+            box-shadow: 0 22px 44px rgba(255,84,0,0.12);
+          }
+          .pricing-card.is-featured {
+            background: linear-gradient(155deg, #ff6a1a 0%, #ff5400 48%, #e04800 100%);
+            color: #fff;
+            border-color: transparent;
+            transform: scale(1.035);
+            z-index: 2;
+            box-shadow: 0 24px 50px rgba(255, 84, 0, 0.32);
+          }
+          .pricing-card.is-featured:hover {
+            transform: scale(1.035) translateY(-5px);
+            box-shadow: 0 30px 60px rgba(255, 84, 0, 0.38);
+          }
+          .pricing-card.is-dark {
+            background: linear-gradient(165deg, #1c1613 0%, #111 100%);
+            color: #fdf8f5;
+            border-color: rgba(17,17,17,0.2);
+          }
+          .pricing-card.is-dark .pricing-price-note,
+          .pricing-card.is-dark .pricing-features li {
+            color: rgba(253,248,245,0.78);
+          }
+          .pricing-badge {
+            position: absolute;
+            top: 1em;
+            right: 1em;
+            background: #111;
+            color: #fff;
+            font-family: var(--font-secondary), "Neuemontreal", sans-serif;
+            font-size: 0.7em;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            border-radius: 999px;
+            padding: 0.5em 0.9em;
+            line-height: 1;
+            border: 1.5px solid rgba(255,255,255,0.2);
+            box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+          }
+          .pricing-plan {
+            font-family: var(--font-secondary), "Neuemontreal", sans-serif;
+            font-size: 0.88em;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin: 0 0 0.9em;
+            color: #ff5400;
+          }
+          .pricing-card.is-featured .pricing-plan,
+          .pricing-card.is-dark .pricing-plan {
+            color: #ffd2b8;
+          }
+          .pricing-price-row {
+            display: flex;
+            align-items: baseline;
+            gap: 0.5em;
+            flex-wrap: wrap;
+            margin-bottom: 1.15em;
+          }
+          .pricing-price {
+            font-family: var(--font-primary), "Mdnichrometest", Impact, sans-serif;
+            font-size: clamp(2.5rem, 3.8vw, 3.4rem);
+            line-height: 0.88;
+            font-weight: 700;
+            letter-spacing: -0.045em;
+            color: #111;
+          }
+          .pricing-card.is-featured .pricing-price,
+          .pricing-card.is-dark .pricing-price {
+            color: #fff;
+            background: none;
+            -webkit-text-fill-color: #fff;
+          }
+          .pricing-price-note {
+            font-family: var(--font-secondary), "Neuemontreal", sans-serif;
+            font-size: 0.78em;
+            font-weight: 600;
+            color: rgba(17,17,17,0.48);
+            max-width: 7.2em;
+            line-height: 1.25;
+          }
+          .pricing-card.is-featured .pricing-price-note {
+            color: rgba(255,255,255,0.78);
+          }
+          .pricing-features {
+            list-style: none;
+            margin: 0 0 1.5em;
+            padding: 0;
+            display: grid;
+            gap: 0.68em;
+            flex: 1 1 auto;
+          }
+          .pricing-features li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.65em;
+            font-family: var(--font-secondary), "Neuemontreal", sans-serif;
+            font-size: 0.9em;
+            font-weight: 500;
+            line-height: 1.3;
+            color: rgba(17,17,17,0.78);
+          }
+          .pricing-card.is-featured .pricing-features li {
+            color: rgba(255,255,255,0.92);
+          }
+          .pricing-features li.is-extra { display: none; }
+          .pricing-features.is-open li.is-extra { display: flex; }
+          .pricing-check {
+            flex: 0 0 auto;
+            width: 1.15em;
+            height: 1.15em;
+            margin-top: 0.08em;
+            color: #ff5400;
+          }
+          .pricing-card.is-featured .pricing-check {
+            color: #fff;
+          }
+          .pricing-card.is-dark .pricing-check {
+            color: #ff8040;
+          }
+          .pricing-check svg {
+            width: 100%;
+            height: 100%;
+            display: block;
+          }
+          .pricing-more {
+            appearance: none;
+            background: none;
+            border: none;
+            color: #ff5400;
+            font-family: var(--font-secondary), "Neuemontreal", sans-serif;
+            font-size: 0.86em;
+            font-weight: 700;
+            cursor: pointer;
+            padding: 0;
+            margin: -0.7em 0 1.2em;
+            text-align: left;
+          }
+          .pricing-card.is-featured .pricing-more { color: #fff; text-decoration: underline; text-underline-offset: 0.18em; }
+          .pricing-card.is-dark .pricing-more { color: #ff8040; }
+          .pricing-cta {
+            margin-top: auto;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.55em;
+            width: 100%;
+            border-radius: 999px;
+            padding: 1em 1.2em;
+            font-family: var(--font-secondary), "Neuemontreal", sans-serif;
+            font-size: 0.92em;
+            font-weight: 700;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            box-sizing: border-box;
+            transition: transform 0.28s ease, background 0.28s ease, color 0.28s ease, box-shadow 0.28s ease;
+          }
+          .pricing-card:not(.is-featured) .pricing-cta {
+            background: #111;
+            color: #fff;
+            box-shadow: 0 8px 18px rgba(17,17,17,0.16);
+          }
+          .pricing-card.is-featured .pricing-cta {
+            background: #fff;
+            color: #111;
+            box-shadow: 0 10px 22px rgba(0,0,0,0.14);
+          }
+          .pricing-card.is-dark .pricing-cta {
+            background: #ff5400;
+            color: #fff;
+            box-shadow: 0 10px 22px rgba(255,84,0,0.3);
+          }
+          .pricing-cta:hover {
+            transform: translateY(-2px);
+            background: #ff5400;
+            color: #fff;
+            box-shadow: 0 12px 26px rgba(255,84,0,0.32);
+          }
+          .pricing-card.is-featured .pricing-cta:hover {
+            background: #111;
+            color: #fff;
+          }
+          .pricing-cta svg {
+            width: 0.85em;
+            height: 0.85em;
+            display: block;
+            transition: transform 0.28s ease;
+          }
+          .pricing-cta:hover svg { transform: translate(2px, -2px); }
+          .pricing-addon {
+            margin: 1.5em auto 0;
+            max-width: 42em;
+            text-align: center;
+            font-family: var(--font-secondary), "Neuemontreal", sans-serif;
+            font-size: 0.92em;
+            color: rgba(17,17,17,0.55);
+            line-height: 1.45;
+          }
+          .pricing-addon strong { color: #ff5400; }
+          @media (max-width: 1100px) {
+            .pricing-grid,
+            .pricing-grid.is-3 {
+              grid-template-columns: repeat(2, minmax(0, 1fr));
+              max-width: none;
+            }
+            .pricing-card.is-featured { transform: none; }
+            .pricing-card.is-featured:hover { transform: translateY(-5px); }
+            .pricing-tabs {
+              border-radius: 1.35em;
+              justify-content: flex-start;
+            }
+          }
+          @media (max-width: 700px) {
+            .pricing-grid,
+            .pricing-grid.is-3 {
+              grid-template-columns: 1fr;
+              max-width: 26em;
+              margin: 0 auto;
+            }
+            .pricing-card.is-featured { order: -1; }
+          }
+        </style>
+        <div class="section-pricing-inner">
+          <div class="pricing-header">
+            <div class="pricing-eyebrow">2 spots open this month</div>
+            <h2 class="pricing-heading">Pick a Package With a Price on the Label</h2>
+            <p class="pricing-lead">No “it depends” until you ask for extras. Compare tiers below for logo, branding, website and motion.</p>
+          </div>
+          <div class="pricing-tabs" role="tablist" aria-label="Choose a service">
+            <button type="button" class="pricing-tab is-active" role="tab" aria-selected="true" data-service="logo">Logo Design</button>
+            <button type="button" class="pricing-tab" role="tab" aria-selected="false" data-service="branding">Branding</button>
+            <button type="button" class="pricing-tab" role="tab" aria-selected="false" data-service="website">Website</button>
+            <button type="button" class="pricing-tab" role="tab" aria-selected="false" data-service="video">Video &amp; Animation</button>
+          </div>
+          <div class="pricing-grid" id="homePricingGrid" aria-live="polite"></div>
+          <p class="pricing-addon" id="pricingAddonNote" hidden>Add Care+ support to Starter or Growth for <strong>$50/month</strong>: ongoing edits, updates and priority help from our developers.</p>
+        </div>
+        <script>
+          (function () {
+            var CHECK = '<span class="pricing-check" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.5 8.2 6.4 11l6.1-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>';
+            var ARROW = '<svg viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M1.5 8.5 8.5 1.5M8.5 1.5H3M8.5 1.5V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+            var PRICING = {
+              logo: {
+                per: "Logo",
+                featured: 1,
+                dark: 3,
+                plans: [
+                  { name: "Bronze", usd: 49, items: ["2 Logo Concepts", "3 Revisions", "No High Res. files", "48 hours Delivery"] },
+                  { name: "Silver", usd: 99, items: ["4 Logo Concepts", "6 Revisions", "Custom Logo", "Vector PDF File", "48 hours Delivery", "HQ PNG + JPEG", "100% Ownership"] },
+                  { name: "Gold", usd: 139, items: ["6 Logo Concepts", "Unlimited Revisions", "Custom Logo", "Vector EPS, PDF file", "24-48 H Delivery", "HQ PNG + JPEG", "100% Ownership"] },
+                  { name: "Platinum", usd: 189, items: ["Unlimited Concepts", "Unlimited Revisions", "Custom Logo", "Editable Vector Ai", "24-48 H Delivery", "Vector EPS, PDF", "HQ PNG + JPEG", "100% Ownership", "Business Card Design"] }
+                ]
+              },
+              branding: {
+                per: "One-time payment",
+                featured: 1,
+                dark: -1,
+                plans: [
+                  { name: "Starter", usd: 400, items: ["Logo and colour palette", "Font pairing", "One-page brand sheet", "2 feedback rounds", "Delivery in 7 days", "All source files", "Updates by email, no meetings"] },
+                  { name: "Growth", usd: 800, items: ["Full brand guidelines", "Business card and letterhead", "10 social media templates", "3 feedback rounds", "Delivery in 10 days", "Brand voice notes", "Everything in Starter"] },
+                  { name: "Pro", usd: 1500, items: ["Brand strategy workshop", "Packaging or signage design", "25 social media templates", "Presentation template", "Unlimited feedback rounds", "Priority 24-hour replies", "Everything in Growth"] }
+                ]
+              },
+              website: {
+                per: "Website",
+                featured: 1,
+                dark: 3,
+                plans: [
+                  { name: "Static", usd: 699, items: ["5 Page Static Website", "Jquery Slider Banner", "W3C Certified HTML", "UI Design", "3 Banner Design", "Favicon", "SEO Friendly Design"] },
+                  { name: "Dynamic", usd: 1199, items: ["Web Development", "5 Pages Dynamic Website", "Jquery Slider Banner", "W3C Certified HTML", "Web Design & UI", "10 Stock Images", "5 Banner Designs", "Advance UI Effects", "SEO Friendly Design", "SEO Friendly Sitemap", "Social Media Inte.", "4 Social Platforms"] },
+                  { name: "E-com", usd: 1699, items: ["Web Development", "Unlimited Pages", "Jquery Slider Banner", "W3C Certified HTML", "Admin Panel Support", "Mobile Responsive Layout", "Cart Integration", "Pay. Module Integration", "Inventory Management", "50 Products & Upto 10 Categories", "Easy Product Search", "Product Reviews", "Web Design & UI", "15 Stock Images", "8 Banner Designs", "Favicon", "Advance UI Effects", "Basic Search Engine Submission", "SEO Friendly Design", "SEO Friendly Sitemap", "Analytics Integration", "Social Media Integration", "4 Social Platforms"] },
+                  { name: "Portal", usd: 2999, per: "Website starting from", items: ["Web Development", "Any One:", "Job Portal", "Professional Network", "Social Network", "Media Portal", "Real Estate Portal", "Medical Portal", "News Portal", "Enterprise Portal", "Client/User Dashboard", "Custom Coding", "Module-wise Architecture", "Extensive Admin Panel", "Complete Deployment"] }
+                ]
+              },
+              video: {
+                per: "Video & animation",
+                featured: 1,
+                dark: 3,
+                plans: [
+                  { name: "Bronze", usd: 499, items: ["Up to 60 seconds of animation", "Scriptwriting support", "Basic storyboard", "Simple graphic elements", "Professional voiceover", "Royalty-free background music", "HD output formats"] },
+                  { name: "Silver", usd: 799, items: ["Up to 60 seconds", "Full script development", "Detailed storyboard", "Enhanced illustrations", "Professional voiceover", "Royalty-free music", "Multiple delivery formats"] },
+                  { name: "Gold", usd: 999, items: ["Up to 60 seconds", "Concept-driven script", "Advanced storyboard", "Custom illustrations", "Voiceover in selected accent", "Royalty-free soundtrack", "HD & social formats"] },
+                  { name: "Platinum", usd: 1499, items: ["Up to 60 seconds", "Strategic scriptwriting", "Premium storyboard", "High-detail illustrations", "Professional voiceover", "Enhanced effects + transitions", "Multiple export formats"] }
+                ]
+              }
+            };
+
+            var grid = document.getElementById("homePricingGrid");
+            var note = document.getElementById("pricingAddonNote");
+            var tabs = document.querySelectorAll(".section-pricing .pricing-tab");
+            if (!grid) return;
+
+            function money(n) {
+              return "$" + n.toLocaleString("en-US");
+            }
+
+            function render(service) {
+              var svc = PRICING[service];
+              if (!svc) return;
+              grid.classList.toggle("is-3", svc.plans.length === 3);
+              grid.innerHTML = svc.plans.map(function (plan, i) {
+                var featured = i === svc.featured;
+                var dark = i === svc.dark;
+                var show = 6;
+                var extras = plan.items.length > show + 2 ? plan.items.length - show : 0;
+                var itemsHtml = plan.items.map(function (item, idx) {
+                  var extraClass = extras && idx >= show ? ' class="is-extra"' : "";
+                  return "<li" + extraClass + ">" + CHECK + item + "</li>";
+                }).join("");
+                var moreBtn = extras
+                  ? '<button type="button" class="pricing-more" data-more>+ ' + extras + " more features</button>"
+                  : "";
+                return (
+                  '<article class="pricing-card' + (featured ? " is-featured" : "") + (dark ? " is-dark" : "") + '">' +
+                    (featured ? '<span class="pricing-badge">Most popular</span>' : "") +
+                    '<h3 class="pricing-plan">' + plan.name + "</h3>" +
+                    '<div class="pricing-price-row">' +
+                      '<div class="pricing-price">' + money(plan.usd) + "</div>" +
+                      '<div class="pricing-price-note">' + (plan.per || svc.per) + "</div>" +
+                    "</div>" +
+                    '<ul class="pricing-features">' + itemsHtml + "</ul>" +
+                    moreBtn +
+                    '<a href="/brief/" class="pricing-cta">Start now ' + ARROW + "</a>" +
+                  "</article>"
+                );
+              }).join("");
+
+              if (note) note.hidden = service !== "branding";
+
+              grid.querySelectorAll(".pricing-more").forEach(function (btn) {
+                btn.addEventListener("click", function () {
+                  var list = btn.previousElementSibling;
+                  if (!list) return;
+                  var open = list.classList.toggle("is-open");
+                  var count = list.querySelectorAll(".is-extra").length;
+                  btn.textContent = open ? "Show fewer features" : ("+ " + count + " more features");
+                });
+              });
+            }
+
+            tabs.forEach(function (tab) {
+              tab.addEventListener("click", function () {
+                tabs.forEach(function (t) {
+                  t.classList.toggle("is-active", t === tab);
+                  t.setAttribute("aria-selected", t === tab ? "true" : "false");
+                });
+                render(tab.getAttribute("data-service"));
+              });
+            });
+
+            render("logo");
+          })();
+        </script>
+      </section>
+<section class="section-services">
         <div class="service-html w-embed w-script"><!-- ======================================================= -->
           <!-- SERVICES PATH DRAW & PROXIMITY EXPANSION COMPONENT       -->
           <!-- Paste in Webflow HTML Embed inside Services Section      -->
@@ -7196,7 +7753,7 @@
             <div class="footer-top-right-top">
               <div class="footer-links-block">
                 <div class="footer-link-header">Main Menu</div><a href="/work" class="footer-link">Work</a><a
-                  href="/about" class="footer-link">About us</a>
+                  href="/about" class="footer-link">About us</a><a href="/pricing" class="footer-link">Pricing</a>
               </div>
               <div class="footer-links-block socials"><a href="#" target="_blank" class="social-link w-inline-block">
                   <div class="footer-link">Instagram</div>
