@@ -1,4 +1,4 @@
-# Logo Design — local site
+# Logo Design — local site   
 
 Local static site for Logo Design (formerly mirrored from an older studio template).
 
