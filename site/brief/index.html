@@ -3,17 +3,27 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Project Brief - Logo Design</title>
-  <meta name="description" content="Start your custom logo brief in a few clear steps." />
+  <title>Project Brief | Logo Design</title>
+  <meta name="twitter:description" content="Start your custom logo brief in a few clear steps. Share your company name, industry and style — we’ll take it from there." />
+  <meta name="twitter:title" content="Project Brief | Logo Design" />
+  <meta property="og:description" content="Start your custom logo brief in a few clear steps. Share your company name, industry and style — we’ll take it from there." />
+  <meta property="og:title" content="Project Brief | Logo Design" />
+  <meta property="og:image" content="https://logo-design-studio.netlify.app/assets/og-blank.png" />
+  <meta name="twitter:image" content="https://logo-design-studio.netlify.app/assets/og-blank.png" />
+  <meta name="twitter:card" content="summary" />
+
+  <meta name="description" content="Start your custom logo brief in a few clear steps. Share your company name, industry and style — we’ll take it from there." />
   <link href="/assets/cdn_prod_website-files_com/6aaad679fdb9d914f7f52049/6aacf0809a19493af8364ae5_fav1.jpg" rel="icon" type="image/png" sizes="32x32" />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
   <style>
+    @font-face { font-family: Mdnichrometest; src: url("/assets/cdn_prod_website-files_com/6aaad679fdb9d914f7f52049/6aaad679fdb9d914f7f52051_MDNichromeTest-Bold.woff") format("woff"); font-weight: 700; font-style: normal; font-display: swap; }
+    @font-face { font-family: Neuemontreal; src: url("/assets/cdn_prod_website-files_com/6aaad679fdb9d914f7f52049/6aaad679fdb9d914f7f52054_NeueMontreal-Medium.otf") format("opentype"); font-weight: 500 700; font-style: normal; font-display: swap; }
+    @font-face { font-family: Neuemontreal; src: url("/assets/cdn_prod_website-files_com/6aaad679fdb9d914f7f52049/6aaad679fdb9d914f7f52053_NeueMontreal-Regular.otf") format("opentype"); font-weight: 400; font-style: normal; font-display: swap; }
     :root {
       --brand: #ff5400;
       --ink: #111;
       --bg: #fae3e2;
       --field: #fff;
-      --shadow: 4px 4px 0 #111;
+      --shadow: 0 10px 28px rgba(0, 0, 0, .1);
       --muted: #9a9a9a;
     }
     * { box-sizing: border-box; }
@@ -22,7 +32,7 @@
       min-height: 100%;
       background: var(--bg);
       color: var(--ink);
-      font-family: "DM Sans", system-ui, sans-serif;
+      font-family: Neuemontreal, Arial, sans-serif;
     }
     .top {
       position: fixed;
@@ -34,9 +44,9 @@
       padding: 1.1rem 1.35rem;
     }
     .logo {
-      font-family: Syne, Impact, sans-serif;
-      font-weight: 800;
-      font-size: 1.2rem;
+      font-family: Mdnichrometest, Impact, sans-serif;
+      font-weight: 700;
+      font-size: 1.65rem;
       letter-spacing: -0.02em;
       text-transform: uppercase;
       text-decoration: none;
@@ -65,7 +75,7 @@
     }
     .stage { width: min(720px, 100%); text-align: center; }
     .title {
-      font-family: Syne, Impact, sans-serif;
+      font-family: Mdnichrometest, Impact, sans-serif;
       font-weight: 800;
       font-size: clamp(2rem, 5.5vw, 3.35rem);
       line-height: 1.05;
@@ -81,22 +91,29 @@
     .nav-btn {
       width: 3rem;
       height: 3rem;
-      border-radius: 0.75rem;
-      border: 2px solid #111;
+      border-radius: 50%;
+      border: 1px solid #111;
       background: #fff;
-      box-shadow: var(--shadow);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, .12);
       display: inline-flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      transition: transform .15s ease, background .15s ease;
+      transition: transform .3s cubic-bezier(.22, 1, .36, 1), background .25s ease, color .25s ease, box-shadow .3s ease;
       flex: 0 0 auto;
       color: #111;
     }
+    #nextBtn {
+      background: #111;
+      border-color: #111;
+      color: #fff;
+    }
     .nav-btn:hover:not(:disabled) {
       background: var(--brand);
+      border-color: var(--brand);
       color: #fff;
-      transform: translateY(-1px);
+      transform: translateY(-2px) scale(1.04);
+      box-shadow: 0 12px 26px rgba(255, 84, 0, .3);
     }
     .nav-btn:disabled {
       opacity: 0.35;
@@ -107,34 +124,133 @@
     .field {
       width: 100%;
       appearance: none;
-      border: 2.5px solid #111;
-      border-radius: 0.85rem;
+      border: 1px solid #111;
+      border-radius: 100px;
       background: var(--field);
-      box-shadow: var(--shadow);
-      padding: 1.05rem 1.15rem;
-      font-size: 1.15rem;
-      font-weight: 600;
+      color: #111;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, .12);
+      padding: 0.95rem 1.4rem;
+      font-size: 1.05rem;
+      font-weight: 500;
+      line-height: 1.2;
       font-family: inherit;
       outline: none;
+      transition: border-color .2s ease, box-shadow .2s ease;
     }
     .field:focus {
       border-color: var(--brand);
-      box-shadow: 4px 4px 0 var(--brand);
+      box-shadow: 0 10px 32px rgba(255, 84, 0, .2), 0 0 0 3px rgba(255, 84, 0, .25);
     }
-    .field::placeholder { color: var(--muted); font-weight: 500; }
+    .field::placeholder { color: rgba(17, 17, 17, .42); font-weight: 500; }
     select.field {
       cursor: pointer;
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23111' stroke-width='2.5'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
       background-repeat: no-repeat;
-      background-position: right 1rem center;
-      padding-right: 2.6rem;
+      background-position: right 1.2rem center;
+      padding-right: 2.8rem;
     }
     .phone-wrap {
-      display: grid;
-      grid-template-columns: minmax(9rem, 11rem) 1fr;
-      gap: 0.6rem;
+      position: relative;
       width: 100%;
     }
+    .phone-field {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      background: var(--field);
+      border: 1px solid #111;
+      border-radius: 100px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, .12);
+      transition: border-color .2s ease, box-shadow .2s ease;
+    }
+    .phone-field:focus-within {
+      border-color: var(--brand);
+      box-shadow: 0 10px 32px rgba(255, 84, 0, .2), 0 0 0 3px rgba(255, 84, 0, .25);
+    }
+    .phone-field .field {
+      border: 0 !important;
+      box-shadow: none !important;
+      background: transparent;
+      padding-left: 0.9rem;
+      min-width: 0;
+      flex: 1 1 auto;
+    }
+    .cc-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex: 0 0 auto;
+      border: 0;
+      border-right: 1px solid rgba(17, 17, 17, .15);
+      background: transparent;
+      padding: 0.55rem 0.9rem 0.55rem 1.15rem;
+      margin: 0.4rem 0;
+      font: inherit;
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: #111;
+      cursor: pointer;
+    }
+    .cc-btn:focus, .cc-btn:focus-visible { outline: none; }
+    .cc-btn:hover { background: rgba(17, 17, 17, .04); border-radius: 999px 0 0 999px; }
+    .cc-flag {
+      width: 1.5rem;
+      height: 1.1rem;
+      border-radius: 3px;
+      object-fit: cover;
+      box-shadow: 0 0 0 1px rgba(17, 17, 17, .12);
+      flex: 0 0 auto;
+      background: #eee;
+    }
+    .cc-chev { width: 0.9rem; height: 0.9rem; transition: transform .2s ease; }
+    .phone-wrap.is-open .cc-chev { transform: rotate(180deg); }
+    .cc-menu {
+      position: absolute;
+      left: 0;
+      top: calc(100% + 0.5rem);
+      z-index: 30;
+      width: min(22rem, 100%);
+      background: #fff;
+      border: 1px solid rgba(17, 17, 17, .12);
+      border-radius: 1.1rem;
+      box-shadow: 0 18px 40px rgba(17, 17, 17, .16);
+      padding: 0.5rem;
+      text-align: left;
+      display: none;
+    }
+    .phone-wrap.is-open .cc-menu { display: block; }
+    .cc-search {
+      width: 100%;
+      border: 1px solid rgba(17, 17, 17, .15);
+      border-radius: 999px;
+      padding: 0.6rem 0.95rem;
+      font: inherit;
+      font-size: 0.95rem;
+      outline: none;
+      margin-bottom: 0.4rem;
+    }
+    .cc-search:focus { border-color: var(--brand); }
+    .cc-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      max-height: 15rem;
+      overflow-y: auto;
+    }
+    .cc-list li {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      padding: 0.6rem 0.7rem;
+      border-radius: 0.7rem;
+      cursor: pointer;
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+    .cc-list li:hover, .cc-list li.is-active { background: rgba(255, 84, 0, .1); }
+    .cc-list li[aria-selected="true"] { color: var(--brand); }
+    .cc-list .cc-name { flex: 1 1 auto; }
+    .cc-list .cc-code { color: var(--muted); font-variant-numeric: tabular-nums; }
     .err {
       margin-top: 0.85rem;
       min-height: 1.25em;
@@ -172,7 +288,7 @@
       box-shadow: 0 0 0 4px rgba(255,84,0,.18);
     }
     .done h1 {
-      font-family: Syne, Impact, sans-serif;
+      font-family: Mdnichrometest, Impact, sans-serif;
       font-size: clamp(1.9rem, 4.8vw, 3.2rem);
       line-height: 1.08;
       letter-spacing: -0.03em;
@@ -274,7 +390,7 @@
       margin-bottom: 0.2rem;
     }
     .mini-pack .price {
-      font-family: Syne, Impact, sans-serif;
+      font-family: Mdnichrometest, Impact, sans-serif;
       font-size: 1.65rem;
       font-weight: 800;
       line-height: 1;
@@ -297,7 +413,7 @@
       flex: 1;
     }
     .thanks-body h3 {
-      font-family: Syne, Impact, sans-serif;
+      font-family: Mdnichrometest, Impact, sans-serif;
       font-size: 1.25rem;
       margin: 0 0 0.45rem;
       letter-spacing: -0.02em;
@@ -341,7 +457,7 @@
         order: 2;
       }
       .field-slot { order: 1; }
-      .phone-wrap { grid-template-columns: 1fr; }
+      .cc-btn { padding-left: 0.9rem; padding-right: 0.6rem; }
       .nav-btn { width: 2.75rem; height: 2.75rem; }
     }
   </style>
@@ -378,7 +494,7 @@
     <div class="thanks-grid">
       <article class="thanks-card">
         <div class="thanks-media">
-          <img src="/assets/generated/team/team-aarav.jpg" alt="Live chat support designer" />
+          <img src="/assets/generated/team/team-ethan.jpg" alt="Live chat support designer" />
         </div>
         <div class="thanks-body">
           <h3>Live Chat Support</h3>
@@ -437,27 +553,52 @@
       ];
 
       const countries = [
-        ["United States (+1)", "+1"],
-        ["Canada (+1)", "+1"],
-        ["United Kingdom (+44)", "+44"],
-        ["Australia (+61)", "+61"],
-        ["India (+91)", "+91"],
-        ["Pakistan (+92)", "+92"],
-        ["United Arab Emirates (+971)", "+971"],
-        ["Saudi Arabia (+966)", "+966"],
-        ["Germany (+49)", "+49"],
-        ["France (+33)", "+33"],
-        ["Netherlands (+31)", "+31"],
-        ["Singapore (+65)", "+65"],
-        ["Japan (+81)", "+81"],
-        ["South Korea (+82)", "+82"],
-        ["China (+86)", "+86"],
-        ["Brazil (+55)", "+55"],
-        ["Mexico (+52)", "+52"],
-        ["South Africa (+27)", "+27"],
-        ["Nigeria (+234)", "+234"],
-        ["Other (+1)", "+1"]
+        ["United States", "+1", "us"],
+        ["Canada", "+1", "ca"],
+        ["United Kingdom", "+44", "gb"],
+        ["Australia", "+61", "au"],
+        ["New Zealand", "+64", "nz"],
+        ["Ireland", "+353", "ie"],
+        ["India", "+91", "in"],
+        ["Pakistan", "+92", "pk"],
+        ["Bangladesh", "+880", "bd"],
+        ["Sri Lanka", "+94", "lk"],
+        ["United Arab Emirates", "+971", "ae"],
+        ["Saudi Arabia", "+966", "sa"],
+        ["Qatar", "+974", "qa"],
+        ["Kuwait", "+965", "kw"],
+        ["Oman", "+968", "om"],
+        ["Bahrain", "+973", "bh"],
+        ["Turkey", "+90", "tr"],
+        ["Egypt", "+20", "eg"],
+        ["Germany", "+49", "de"],
+        ["France", "+33", "fr"],
+        ["Italy", "+39", "it"],
+        ["Spain", "+34", "es"],
+        ["Netherlands", "+31", "nl"],
+        ["Belgium", "+32", "be"],
+        ["Switzerland", "+41", "ch"],
+        ["Sweden", "+46", "se"],
+        ["Norway", "+47", "no"],
+        ["Denmark", "+45", "dk"],
+        ["Poland", "+48", "pl"],
+        ["Singapore", "+65", "sg"],
+        ["Malaysia", "+60", "my"],
+        ["Indonesia", "+62", "id"],
+        ["Philippines", "+63", "ph"],
+        ["Japan", "+81", "jp"],
+        ["South Korea", "+82", "kr"],
+        ["China", "+86", "cn"],
+        ["Hong Kong", "+852", "hk"],
+        ["Brazil", "+55", "br"],
+        ["Mexico", "+52", "mx"],
+        ["Argentina", "+54", "ar"],
+        ["South Africa", "+27", "za"],
+        ["Nigeria", "+234", "ng"],
+        ["Kenya", "+254", "ke"]
       ];
+      const flagUrl = (iso) => `/assets/flags/${iso}.png`;
+      const ccLabel = (c) => `${c[0]} (${c[1]})`;
 
       const params = new URLSearchParams(location.search);
       const data = {
@@ -526,21 +667,81 @@
         {
           title: "Enter Your Phone Number (Optional)",
           html() {
-            const opts = countries.map(([label, code]) =>
-              `<option value="${esc(label)}" data-code="${esc(code)}"${data.countryLabel===label?" selected":""}>${esc(label)}</option>`
+            const cur = countries.find(c => ccLabel(c) === data.countryLabel) || countries[0];
+            const items = countries.map((c, i) =>
+              `<li role="option" data-i="${i}" aria-selected="${c === cur}"><img class="cc-flag" src="${flagUrl(c[2])}" alt="" /><span class="cc-name">${esc(c[0])}</span><span class="cc-code">${esc(c[1])}</span></li>`
             ).join("");
-            return `<div class="phone-wrap">
-              <select class="field" id="country">${opts}</select>
-              <input class="field" id="field" type="tel" placeholder="Phone number (optional)" value="${esc(data.phone)}" autocomplete="tel" />
+            return `<div class="phone-wrap" id="phoneWrap">
+              <div class="phone-field">
+                <button type="button" class="cc-btn" id="ccBtn" aria-haspopup="listbox" aria-expanded="false" aria-label="Country code: ${esc(cur[0])} ${esc(cur[1])}" data-i="${countries.indexOf(cur)}">
+                  <img class="cc-flag" id="ccFlag" src="${flagUrl(cur[2])}" alt="" />
+                  <span id="ccCode">${esc(cur[1])}</span>
+                  <svg class="cc-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <input class="field" id="field" type="tel" placeholder="Phone number (optional)" value="${esc(data.phone)}" autocomplete="tel-national" inputmode="tel" />
+              </div>
+              <div class="cc-menu" id="ccMenu">
+                <input class="cc-search" id="ccSearch" type="text" placeholder="Search country or code" autocomplete="off" />
+                <ul class="cc-list" id="ccList" role="listbox">${items}</ul>
+              </div>
             </div>`;
+          },
+          mount() {
+            const wrap = document.getElementById("phoneWrap");
+            const btn = document.getElementById("ccBtn");
+            const search = document.getElementById("ccSearch");
+            const list = document.getElementById("ccList");
+            const phone = document.getElementById("field");
+            if (!wrap || !btn) return;
+            const setOpen = (open) => {
+              wrap.classList.toggle("is-open", open);
+              btn.setAttribute("aria-expanded", open ? "true" : "false");
+              if (open) {
+                search.value = "";
+                filter("");
+                setTimeout(() => search.focus(), 0);
+                const sel = list.querySelector('[aria-selected="true"]');
+                if (sel) sel.scrollIntoView({ block: "nearest" });
+              }
+            };
+            const choose = (i) => {
+              const c = countries[i];
+              btn.dataset.i = i;
+              document.getElementById("ccFlag").src = flagUrl(c[2]);
+              document.getElementById("ccCode").textContent = c[1];
+              btn.setAttribute("aria-label", `Country code: ${c[0]} ${c[1]}`);
+              list.querySelectorAll("li").forEach(li => li.setAttribute("aria-selected", li.dataset.i == i ? "true" : "false"));
+              data.countryLabel = ccLabel(c);
+              data.countryCode = c[1];
+              setOpen(false);
+              phone.focus();
+            };
+            const filter = (q) => {
+              q = q.trim().toLowerCase();
+              list.querySelectorAll("li").forEach(li => {
+                const c = countries[li.dataset.i];
+                li.hidden = q && !(c[0].toLowerCase().includes(q) || c[1].includes(q.replace(/^\+?/, "+")));
+              });
+            };
+            btn.addEventListener("click", (e) => { e.stopPropagation(); setOpen(!wrap.classList.contains("is-open")); });
+            list.addEventListener("click", (e) => { const li = e.target.closest("li"); if (li) choose(+li.dataset.i); });
+            search.addEventListener("input", () => filter(search.value));
+            search.addEventListener("keydown", (e) => {
+              if (e.key === "Enter") {
+                e.preventDefault(); e.stopPropagation();
+                const first = list.querySelector("li:not([hidden])");
+                if (first) choose(+first.dataset.i);
+              } else if (e.key === "Escape") { setOpen(false); btn.focus(); }
+            });
+            document.addEventListener("click", (e) => { if (!wrap.contains(e.target)) setOpen(false); });
           },
           read() {
             data.phone = getVal();
-            const c = document.getElementById("country");
-            if (c) {
-              data.countryLabel = c.value;
-              const opt = c.options[c.selectedIndex];
-              data.countryCode = opt ? opt.getAttribute("data-code") || "+1" : "+1";
+            const btn = document.getElementById("ccBtn");
+            if (btn) {
+              const c = countries[+btn.dataset.i] || countries[0];
+              data.countryLabel = ccLabel(c);
+              data.countryCode = c[1];
             }
           },
           validate() { return ""; }
@@ -568,6 +769,7 @@
         const step = steps[index];
         titleEl.textContent = step.title;
         slot.innerHTML = step.html();
+        if (step.mount) step.mount();
         errEl.textContent = "";
         prevBtn.disabled = index === 0;
         const field = document.getElementById("field");

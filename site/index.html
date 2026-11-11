@@ -5,18 +5,16 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>Logo Design | Boutique Design Studio</title>
-  <meta
-    content="Logo Design is a boutique design studio in Bucharest creating brands with strategy, personality and a healthy obsession for the details."
-    name="description" />
-  <meta content="Logo Design | Boutique Design Studio" property="og:title" />
-  <meta
-    content="Logo Design is a boutique design studio in Bucharest creating brands with strategy, personality and a healthy obsession for the details."
-    property="og:description" />
-  <meta content="Logo Design | Boutique Design Studio" name="twitter:title" />
-  <meta
-    content="Logo Design is a boutique design studio in Bucharest creating brands with strategy, personality and a healthy obsession for the details."
-    name="twitter:description" />
+  <title>Logo Design | Custom Logos & Brand Identity Studio</title>
+  <meta name="description" content="Custom logo design, brand identity and visual systems built for startups and growing businesses. Clear packages, fast delivery, full ownership." />
+  <meta property="og:title" content="Logo Design | Custom Logos & Brand Identity Studio" />
+  <meta property="og:description" content="Custom logo design, brand identity and visual systems built for startups and growing businesses. Clear packages, fast delivery, full ownership." />
+  <meta property="og:image" content="https://logo-design-studio.netlify.app/assets/og-blank.png" />
+  <meta name="twitter:image" content="https://logo-design-studio.netlify.app/assets/og-blank.png" />
+  <meta name="twitter:card" content="summary" />
+
+  <meta name="twitter:title" content="Logo Design | Custom Logos & Brand Identity Studio" />
+  <meta name="twitter:description" content="Custom logo design, brand identity and visual systems built for startups and growing businesses. Clear packages, fast delivery, full ownership." />
   <meta property="og:type" content="website" />
   <meta content="summary" name="twitter:card" />
   <meta content="width=device-width, initial-scale=1" name="viewport" />
@@ -70,7 +68,7 @@
     }
 
     .hero-search-wrap {
-      width: min(34em, 92vw);
+      width: min(31em, 92vw);
       margin: 1.5em auto 0;
       position: relative;
       z-index: 5;
@@ -78,10 +76,10 @@
       align-items: center;
       gap: 0.35em;
       background: #fff;
-      border: 2px solid #111;
+      border: 1px solid #111;
       border-radius: 100px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, .12);
-      padding: 0.28em 0.28em 0.28em 0.85em;
+      padding: 0.1em 0.1em 0.1em 0.85em;
       box-sizing: border-box;
     }
     form.hero-search-wrap {
@@ -144,7 +142,7 @@
       font-weight: 500;
       line-height: 1.2;
       border-radius: 100px;
-      padding: 0.85em 0.75em 0.85em 0.15em;
+      padding: 0.6em 0.75em 0.6em 0.15em;
       box-shadow: none;
     }
 
@@ -156,6 +154,7 @@
       flex: 0 0 auto;
       display: inline-flex;
       align-items: center;
+      justify-content: space-between;
       gap: 0.55em;
       border: none;
       cursor: pointer;
@@ -166,12 +165,17 @@
       font-weight: 500;
       line-height: 1;
       border-radius: 100px;
-      padding: 0.35em 0.35em 0.35em 1.1em;
-      transition: transform .2s ease, background .2s ease;
+      padding: 0.1875em 0.1875em 0.1875em 1.25em;
+      margin-right: 0.3rem;
+      position: relative;
+      overflow: hidden;
+      transition: transform .3s cubic-bezier(.22, 1, .36, 1), box-shadow .3s ease;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.16);
     }
 
     .hero-search-btn:hover {
-      background: #ff5400;
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
     }
 
     .hero-search-btn:active {
@@ -180,47 +184,84 @@
 
     .hero-search-btn-label {
       white-space: nowrap;
+      position: relative;
+      z-index: 2;
+      padding-right: 0.5em;
     }
 
     .hero-search-btn-icon {
-      width: 2.1em;
-      height: 2.1em;
+      width: 1.875em;
+      height: 1.875em;
       border-radius: 50%;
       background: #ff5400;
       display: inline-flex;
       align-items: center;
       justify-content: center;
       flex: 0 0 auto;
+      position: relative;
+      z-index: 2;
+      transition: transform .3s cubic-bezier(.22, 1, .36, 1);
     }
 
     .hero-search-btn:hover .hero-search-btn-icon {
-      background: #111;
+      transform: translate(2px, -2px) scale(1.06);
     }
 
     .hero-search-btn-icon svg {
-      width: 0.7em;
-      height: 0.7em;
+      width: 0.625em;
+      height: 0.625em;
       display: block;
+    }
+
+    .hero-search-btn-fill {
+      position: absolute;
+      right: 0.15em;
+      top: 50%;
+      width: 1.875em;
+      height: 1.875em;
+      margin-top: -0.9375em;
+      border-radius: 50%;
+      background: #ff5400;
+      z-index: 1;
+      pointer-events: none;
+      transform: scale(1);
+      transform-origin: center center;
+      will-change: transform;
     }
 
     @media (max-width:767px) {
       .hero-search-wrap {
         width: min(100%, 92vw);
-        padding-left: 0.75em;
+        flex-wrap: wrap;
+        row-gap: 0.4em;
+        border-radius: 1.5em;
+        padding: 0.4em 0.4em 0.4em 0.9em;
       }
 
       .hero-search-input {
+        flex: 1 1 0;
         font-size: 1em;
-        padding: .8em .55em .8em .1em;
+        padding: .75em .55em .75em .1em;
       }
 
       .hero-search-btn {
-        padding: 0.3em 0.3em 0.3em 0.85em;
-        font-size: 0.88em;
+        flex: 0 0 calc(100% + 0.5em);
+        width: calc(100% + 0.5em);
+        margin-right: 0;
+        margin-left: -0.5em;
+        padding: 0.3em 0.3em 0.3em 1.25em;
+        font-size: 0.95em;
+      }
+
+      .hero-search-btn:hover {
+        transform: translateY(-1px);
       }
 
       .hero-search-btn-label {
-        display: none;
+        display: inline;
+        flex: 1 1 auto;
+        text-align: center;
+        padding-left: 1.875em;
       }
     }
   </style>
@@ -430,13 +471,11 @@
     }
 
     .navbar-timing {
-      max-width: 8.5em !important;
-      font-size: 0.78em !important;
-      font-weight: 600 !important;
-      line-height: 1.25 !important;
-      letter-spacing: 0.02em;
-      color: rgba(0, 0, 0, 0.62) !important;
-      text-align: right;
+      display: none !important;
+    }
+
+    .navbar-right .navbar-link-btn {
+      flex: 0 0 auto;
     }
 
     .cta-wrap .cta-btn,
@@ -531,7 +570,74 @@
       }
     })();
   </script>
-</head>
+
+  <style id="section-heading-two-tone-css">
+    /* Same heading size across every section — always 1 line */
+    .section-heading-wrapper {
+      width: 100% !important;
+      max-width: 100% !important;
+      justify-content: center !important;
+      overflow: visible !important;
+    }
+    .section-heading,
+    .section-heading.less-max-w,
+    .section-heading.left-align,
+    .section-heading.white,
+    h2.section-heading {
+      font-size: clamp(1.8rem, 5.2vw, 4.6rem) !important;
+      line-height: 0.9 !important;
+      width: max-content !important;
+      max-width: 100% !important;
+      white-space: nowrap !important;
+      color: #111 !important;
+      text-align: center;
+      display: block !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+    .section-heading.left-align {
+      margin-left: 0 !important;
+      margin-right: auto !important;
+      text-align: left;
+    }
+    .section-heading .heading-accent,
+    .footer-heading .heading-accent {
+      color: #ff5400 !important;
+      white-space: nowrap !important;
+      display: inline !important;
+    }
+    .footer-heading {
+      font-size: 5.5em !important;
+    }
+
+    /* Equal vertical rhythm for main content sections */
+    .section-projects-wrapper,
+    .section-services-wrapper,
+    .section-testimonials-wrapper,
+    .section-faq-wrapper,
+    .section-pricing,
+    .section-about-wrapper {
+      padding-top: 6.5em !important;
+      padding-bottom: 6.5em !important;
+    }
+    .section-projects-wrapper.padding {
+      padding-bottom: 6.5em !important;
+    }
+
+    /* Selected Works section: slightly different bg */
+    .section-projects {
+      background-color: #f3e4de !important;
+      width: 100%;
+    }
+
+    /* Testimonial body text: black (not orange) */
+    .testimonial-card-para,
+    .testimonial-pfp-name,
+    .testimonial-pfp-designation {
+      color: #111 !important;
+    }
+  </style>
+<link rel="stylesheet" href="/assets/site-enhance.css" /></head>
 
 <body class="body">
   <div class="code-embed-10 w-embed w-script">
@@ -863,11 +969,11 @@
                 })();
               </script>
             </div>
-          </a><a href="/pricing" class="navbar-link-btn w-inline-block"><div class="navlink-text">Pricing</div></a></div><a href="/" aria-current="page" class="navbar-logo w-inline-block w--current"><span
+          </a></div><a href="/" aria-current="page" class="navbar-logo w-inline-block w--current"><span
             class="brand-wordmark">Logo Design</span></a>
         <div class="navbar-right">
-          <div class="navbar-timing">Monday–Friday 10:00 – 17:00</div>
-          <div class="cta-wrap"><a data-wf--cta-btn--variant="base" href="#" class="cta-btn w-inline-block">
+          <a href="/pricing" class="navbar-link-btn navbar-link-btn--right w-inline-block"><div class="navlink-text">Pricing</div></a>
+          <div class="cta-wrap"><a data-wf--cta-btn--variant="base" href="/contact-us/" class="cta-btn w-inline-block">
               <div class="cta-text">Let&#x27;s Talk</div>
               <div class="cta-btn-arrow">
                 <div class="svg-arrow-cta w-embed"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"
@@ -1610,7 +1716,7 @@
                 </script>
               </div>
             </a><a href="/pricing" class="navbar-link-btn w-inline-block"><div class="navlink-text">Pricing</div></a>
-            <div class="ham-cta"><a data-wf--cta-btn--variant="base" href="#" class="cta-btn w-inline-block">
+            <div class="ham-cta"><a data-wf--cta-btn--variant="base" href="/contact-us/" class="cta-btn w-inline-block">
                 <div class="cta-text">Let&#x27;s Talk</div>
                 <div class="cta-btn-arrow">
                   <div class="svg-arrow-cta w-embed"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"
@@ -1801,32 +1907,7 @@
                 class="email-link">hello@logodesign.com</a>
             </div>
           </div>
-        </div><a href="#" target="_blank" class="contact-social right w-inline-block">
-          <div class="icon w-embed"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <g clip-path="url(#clip0_347_3609)">
-                <path
-                  d="M21.2725 0.150391C22.6809 0.150391 23.8496 1.31911 23.8496 2.72754V21.2725C23.8496 22.6809 22.6809 23.8496 21.2725 23.8496H2.72754C1.31911 23.8496 0.150391 22.6809 0.150391 21.2725V2.72852C0.155784 2.04633 0.428741 1.39352 0.911133 0.911133C1.33331 0.488956 1.88594 0.226532 2.47461 0.164062L2.72852 0.150391H21.2725ZM2.72754 2.03223C2.33379 2.03223 2.03223 2.33379 2.03223 2.72754V21.2695C2.03032 21.3617 2.04666 21.4535 2.08105 21.5391C2.11548 21.6247 2.16718 21.7023 2.23242 21.7676C2.29767 21.8328 2.37533 21.8845 2.46094 21.9189C2.54564 21.953 2.63628 21.9683 2.72754 21.9668V21.9678H21.2725V21.9668C21.3637 21.9683 21.4544 21.953 21.5391 21.9189C21.6247 21.8845 21.7023 21.8328 21.7676 21.7676C21.8328 21.7023 21.8845 21.6247 21.9189 21.5391C21.9533 21.4535 21.9697 21.3617 21.9678 21.2695V2.72754C21.9678 2.33379 21.6662 2.03223 21.2725 2.03223H2.72754ZM15.7832 9.18359C17.3766 9.18359 18.2845 9.69934 18.8057 10.5234C19.3369 11.3635 19.4863 12.5533 19.4863 13.9434V19.4863H16.582V14.5908C16.582 13.9965 16.5787 13.2839 16.3545 12.7207C16.2406 12.4348 16.0676 12.1795 15.8037 11.9971C15.5395 11.8144 15.1967 11.7139 14.7607 11.7139C14.3227 11.7139 13.966 11.7996 13.6787 11.958C13.3905 12.117 13.1804 12.344 13.0303 12.6133C12.7339 13.145 12.668 13.8439 12.668 14.5225V19.4863H9.7627V9.42285H12.5322V10.8535H12.8408L12.8828 10.7744C13.2881 10.0071 14.2786 9.18362 15.7832 9.18359ZM7.45215 9.42285V19.4863H4.51367V9.42285H7.45215ZM5.92871 4.20703C6.37895 4.21789 6.80748 4.40429 7.12207 4.72656C7.43654 5.04878 7.61226 5.4814 7.6123 5.93164C7.6123 6.38186 7.43648 6.81448 7.12207 7.13672C6.80748 7.45899 6.37895 7.64539 5.92871 7.65625C5.69872 7.66179 5.46996 7.62129 5.25586 7.53711C5.04179 7.45293 4.84625 7.3267 4.68164 7.16602C4.51718 7.00538 4.38613 6.81343 4.29688 6.60156C4.2076 6.3896 4.16211 6.16164 4.16211 5.93164C4.16213 5.70163 4.20757 5.47368 4.29688 5.26172C4.38616 5.04982 4.51712 4.85791 4.68164 4.69727C4.84627 4.53656 5.04175 4.41036 5.25586 4.32617C5.46996 4.242 5.69873 4.20149 5.92871 4.20703Z"
-                  fill="#F8EEE8" stroke="#F8EEE8" stroke-width="0.3" />
-              </g>
-              <defs>
-                <clipPath id="clip0_347_3609">
-                  <rect width="24" height="24" fill="white" />
-                </clipPath>
-              </defs>
-            </svg>
-          </div>
-          <div class="contact-social-link">Linkedin</div>
-        </a><a href="#" target="_blank" class="contact-social left w-inline-block">
-          <div class="icon w-embed"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M6.465 0.066C7.638 0.012 8.012 0 11 0C13.988 0 14.362 0.013 15.534 0.066C16.706 0.119 17.506 0.306 18.206 0.577C18.939 0.854 19.604 1.287 20.154 1.847C20.714 2.396 21.146 3.06 21.422 3.794C21.694 4.494 21.88 5.294 21.934 6.464C21.988 7.639 22 8.013 22 11C22 13.987 21.987 14.362 21.934 15.535C21.881 16.705 21.694 17.505 21.422 18.205C21.1459 18.939 20.7132 19.6041 20.154 20.154C19.604 20.714 18.939 21.146 18.206 21.422C17.506 21.694 16.706 21.88 15.536 21.934C14.362 21.988 13.988 22 11 22C8.012 22 7.638 21.987 6.465 21.934C5.295 21.881 4.495 21.694 3.795 21.422C3.06096 21.1459 2.39588 20.7132 1.846 20.154C1.28658 19.6045 0.853545 18.9398 0.577 18.206C0.306 17.506 0.12 16.706 0.066 15.536C0.012 14.361 0 13.987 0 11C0 8.013 0.013 7.638 0.066 6.466C0.119 5.294 0.306 4.494 0.577 3.794C0.853838 3.06014 1.28722 2.3954 1.847 1.846C2.3962 1.2867 3.06059 0.853673 3.794 0.577C4.494 0.306 5.295 0.12 6.465 0.066ZM15.444 2.046C14.284 1.993 13.936 1.982 10.999 1.982C8.062 1.982 7.714 1.993 6.554 2.046C5.481 2.095 4.899 2.274 4.511 2.425C3.998 2.625 3.631 2.862 3.246 3.247C2.88073 3.60179 2.59981 4.0341 2.424 4.512C2.273 4.9 2.094 5.482 2.045 6.555C1.992 7.715 1.981 8.063 1.981 11C1.981 13.937 1.992 14.285 2.045 15.445C2.094 16.518 2.273 17.1 2.424 17.488C2.6 17.965 2.881 18.398 3.246 18.753C3.601 19.118 4.034 19.399 4.511 19.575C4.899 19.726 5.481 19.905 6.554 19.954C7.714 20.007 8.061 20.018 10.999 20.018C13.937 20.018 14.284 20.007 15.444 19.954C16.517 19.905 17.099 19.726 17.487 19.575C18 19.375 18.367 19.138 18.752 18.753C19.117 18.398 19.398 17.965 19.574 17.488C19.725 17.1 19.904 16.518 19.953 15.445C20.006 14.285 20.017 13.937 20.017 11C20.017 8.063 20.006 7.715 19.953 6.555C19.904 5.482 19.725 4.9 19.574 4.512C19.374 3.999 19.137 3.632 18.752 3.247C18.3972 2.88173 17.9649 2.60081 17.487 2.425C17.099 2.274 16.517 2.095 15.444 2.046ZM9.594 14.391C10.3787 14.7176 11.2524 14.7617 12.0659 14.5157C12.8795 14.2697 13.5824 13.7489 14.0546 13.0422C14.5268 12.3356 14.7391 11.4869 14.655 10.6411C14.571 9.79534 14.196 9.00497 13.594 8.405C13.2102 8.02148 12.7462 7.72781 12.2353 7.54515C11.7245 7.36248 11.1794 7.29536 10.6395 7.34862C10.0996 7.40187 9.57815 7.57418 9.1128 7.85313C8.64746 8.13208 8.24974 8.51074 7.9483 8.96185C7.64686 9.41296 7.44919 9.92529 7.36952 10.462C7.28984 10.9986 7.33015 11.5463 7.48754 12.0655C7.64493 12.5847 7.91548 13.0626 8.27972 13.4647C8.64396 13.8668 9.09282 14.1832 9.594 14.391ZM7.002 7.002C7.52702 6.47697 8.15032 6.0605 8.8363 5.77636C9.52228 5.49222 10.2575 5.34597 11 5.34597C11.7425 5.34597 12.4777 5.49222 13.1637 5.77636C13.8497 6.0605 14.473 6.47697 14.998 7.002C15.523 7.52702 15.9395 8.15032 16.2236 8.8363C16.5078 9.52228 16.654 10.2575 16.654 11C16.654 11.7425 16.5078 12.4777 16.2236 13.1637C15.9395 13.8497 15.523 14.473 14.998 14.998C13.9377 16.0583 12.4995 16.654 11 16.654C9.50046 16.654 8.06234 16.0583 7.002 14.998C5.94166 13.9377 5.34597 12.4995 5.34597 11C5.34597 9.50046 5.94166 8.06234 7.002 7.002ZM17.908 6.188C18.0381 6.06527 18.1423 5.91768 18.2143 5.75397C18.2863 5.59027 18.3248 5.41377 18.3274 5.23493C18.33 5.05609 18.2967 4.87855 18.2295 4.71281C18.1622 4.54707 18.0624 4.39651 17.936 4.27004C17.8095 4.14357 17.6589 4.04376 17.4932 3.97652C17.3275 3.90928 17.1499 3.87598 16.9711 3.87858C16.7922 3.88119 16.6157 3.91965 16.452 3.9917C16.2883 4.06374 16.1407 4.1679 16.018 4.298C15.7793 4.55103 15.6486 4.88712 15.6537 5.23493C15.6588 5.58274 15.7992 5.91488 16.0452 6.16084C16.2911 6.40681 16.6233 6.54723 16.9711 6.5523C17.3189 6.55737 17.655 6.42669 17.908 6.188Z"
-                fill="#F8EEE8" />
-            </svg>
-          </div>
-          <div class="contact-social-link">Instagram</div>
-        </a>
+        </div>
         <div class="contact-img-wrap"><img
             src="/assets/cdn_prod_website-files_com/6aaad679fdb9d914f7f52049/6aaad679fdb9d914f7f5206b_contact.svg"
             loading="lazy" alt="" class="contact-img" /></div>
@@ -3072,8 +3153,8 @@
               <div class="hero-pill-text">No funny business</div>
             </div>
             <form class="hero-search-wrap" id="hero-brief-form" action="/brief/" method="get"><span class="hero-search-pencil" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M227.31,73.37,182.63,28.68a16,16,0,0,0-22.63,0L36.69,152A15.86,15.86,0,0,0,32,163.31V208a16,16,0,0,0,16,16H92.69A15.86,15.86,0,0,0,104,219.31L227.31,96a16,16,0,0,0,0-22.63ZM51.31,160,136,75.31,152.69,92,68,176.68ZM48,208V179.31L76.69,208Zm48,0L79.31,191,164,106.35,180.68,123ZM192,108.68,147.31,64l24-24L216,84.68Z"/></svg></span><input class="hero-search-input" type="text" name="name"
-                placeholder="Enter your company / business name" autocomplete="organization" /><button class="hero-search-btn"
-                type="submit" aria-label="Get My Custom Logo"><span class="hero-search-btn-label">Get My Custom
+                placeholder="Enter your business name" autocomplete="organization" /><button class="hero-search-btn"
+                type="submit" aria-label="Get My Custom Logo"><span class="hero-search-btn-fill" aria-hidden="true"></span><span class="hero-search-btn-label">Get My Custom
                   Logo</span><span class="hero-search-btn-icon" aria-hidden="true"><svg viewBox="0 0 10 10" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path d="M1.5 8.5L8.5 1.5M8.5 1.5H3M8.5 1.5V7" stroke="white" stroke-width="1.6"
@@ -3089,6 +3170,56 @@
                   var name = input && input.value ? input.value.trim() : "";
                   var url = "/brief/" + (name ? ("?name=" + encodeURIComponent(name)) : "");
                   window.location.href = url;
+                });
+
+                var btn = form.querySelector(".hero-search-btn");
+                var fill = form.querySelector(".hero-search-btn-fill");
+                var icon = form.querySelector(".hero-search-btn-icon");
+                if (!btn || !fill) return;
+
+                function coverScale() {
+                  var bw = btn.offsetWidth || 280;
+                  var bh = btn.offsetHeight || 44;
+                  var base = fill.offsetWidth || 30;
+                  // diagonal of button / base diameter, plus buffer so left edge is fully covered
+                  var need = (Math.sqrt(bw * bw + bh * bh) * 2.2) / base;
+                  return Math.max(need, 18);
+                }
+
+                function animateFill(toScale) {
+                  if (window.gsap) {
+                    window.gsap.to(fill, {
+                      scale: toScale,
+                      duration: 0.55,
+                      ease: "power2.out",
+                      overwrite: "auto"
+                    });
+                    return;
+                  }
+                  fill.style.transition = "transform 0.55s cubic-bezier(0.22, 1, 0.36, 1)";
+                  fill.style.transform = "scale(" + toScale + ")";
+                }
+
+                btn.addEventListener("mouseenter", function () {
+                  animateFill(coverScale());
+                  if (window.gsap && icon) {
+                    window.gsap.set(icon, { transformOrigin: "center center" });
+                    window.gsap.to(icon, {
+                      rotate: 12,
+                      yoyo: true,
+                      repeat: -1,
+                      duration: 0.35,
+                      ease: "power1.inOut",
+                      overwrite: "auto"
+                    });
+                  }
+                });
+                btn.addEventListener("mouseleave", function () {
+                  animateFill(1);
+                  if (window.gsap && icon) {
+                    window.gsap.killTweensOf(icon);
+                    window.gsap.to(icon, { rotate: 0, duration: 0.25, overwrite: "auto" });
+                  }
                 });
               })();
             </script>
@@ -3432,7 +3563,13 @@
                       loading="lazy" sizes="100vw"
                       srcset="/assets/cdn_prod_website-files_com/6aaad679fdb9d914f7f52049/6ab2634dc8995221637e120c_Shot%206-p-500.png 500w, /assets/cdn_prod_website-files_com/6aaad679fdb9d914f7f52049/6ab2634dc8995221637e120c_Shot%206-p-800.png 800w, /assets/cdn_prod_website-files_com/6aaad679fdb9d914f7f52049/6ab2634dc8995221637e120c_Shot%206-p-1080.png 1080w, /assets/cdn_prod_website-files_com/6aaad679fdb9d914f7f52049/6ab2634dc8995221637e120c_Shot%206.png 1100w"
                       alt="" class="showcase-slide-img" /></div>
-                </div>
+                <div class="showcase-slide banner-extra-slide"><img src="/assets/cdn_prod_website-files_com/6aaad679fdb9d914f7f5203c/6ab391a7175b4ccd0e8c2c99_cover%20bagel.jpg" loading="lazy" alt="" class="showcase-slide-img" /></div>
+<div class="showcase-slide banner-extra-slide"><img src="/assets/cdn_prod_website-files_com/6aaad679fdb9d914f7f5203c/6ab270be80849a0a23faa239_6ab27087a6716c1b6c77a96a_merci_Thumbnail1.jpeg" loading="lazy" alt="" class="showcase-slide-img" /></div>
+<div class="showcase-slide banner-extra-slide"><img src="/assets/cdn_prod_website-files_com/6aaad679fdb9d914f7f5203c/6ab2723d53bb370f04afa381_6ab2721e4694c5c1d617273d_Munchies_1.jpeg" loading="lazy" alt="" class="showcase-slide-img" /></div>
+<div class="showcase-slide banner-extra-slide"><img src="/assets/cdn_prod_website-files_com/6aaad679fdb9d914f7f5203c/6ab270be80849a0a23faa284_6ab270907f6e9d96146209a1_MVP_Thumbnail1.jpeg" loading="lazy" alt="" class="showcase-slide-img" /></div>
+<div class="showcase-slide banner-extra-slide"><img src="/assets/cdn_prod_website-files_com/6aaad679fdb9d914f7f5203c/6ab393770c697e34bcc4e4fb_Vertical6.jpg" loading="lazy" alt="" class="showcase-slide-img" /></div>
+<div class="showcase-slide banner-extra-slide"><img src="/assets/cdn_prod_website-files_com/6aaad679fdb9d914f7f5203c/6ab2723d53bb370f04afa37d_6ab272335c44422412d81fb1_YumYum_1.jpeg" loading="lazy" alt="" class="showcase-slide-img" /></div>
+</div>
               </div>
             </section>
           </div>
@@ -4526,7 +4663,7 @@
         <div class="section-projects-wrapper">
           <div class="section-projects-header">
             <div class="section-heading-wrapper">
-              <h2 class="section-heading less-max-w">Selected Works</h2>
+              <h2 class="section-heading">Selected <span class="heading-accent">Works</span></h2>
             </div>
           </div>
           <div class="projects-vertical-wrapper">
@@ -4558,7 +4695,7 @@
                           class="project-logo-img" /></div>
                       <div class="project-detail-header">
                         <div class="project-detail-btm">
-                          <div class="project-name-text">HeyGluco</div>
+                          <div class="project-name-text">VitaPulse</div>
                         </div>
                         <div class="project-detail-text">Health &amp; Wellness</div>
                       </div>
@@ -4595,7 +4732,7 @@
                           class="project-logo-img" /></div>
                       <div class="project-detail-header">
                         <div class="project-detail-btm">
-                          <div class="project-name-text">THE BAGEL BAR</div>
+                          <div class="project-name-text">CRUST & CO</div>
                         </div>
                         <div class="project-detail-text">Food &amp; Beverage</div>
                       </div>
@@ -4632,7 +4769,7 @@
                           class="project-logo-img" /></div>
                       <div class="project-detail-header">
                         <div class="project-detail-btm">
-                          <div class="project-name-text">TANTI MARIA</div>
+                          <div class="project-name-text">NONNA ROSA</div>
                         </div>
                         <div class="project-detail-text">Food &amp; Retail</div>
                       </div>
@@ -4670,7 +4807,7 @@
                           class="project-logo-img" /></div>
                       <div class="project-detail-header">
                         <div class="project-detail-btm">
-                          <div class="project-name-text">MUNCHIES AND CREAM</div>
+                          <div class="project-name-text">SCOOP & CRUNCH</div>
                         </div>
                         <div class="project-detail-text">Food &amp; Beverage</div>
                       </div>
@@ -4707,7 +4844,7 @@
                           class="project-logo-img" /></div>
                       <div class="project-detail-header">
                         <div class="project-detail-btm">
-                          <div class="project-name-text">MVP</div>
+                          <div class="project-name-text">APEX</div>
                         </div>
                         <div class="project-detail-text">Sports &amp; Talent Management</div>
                       </div>
@@ -4744,7 +4881,7 @@
                           class="project-logo-img" /></div>
                       <div class="project-detail-header">
                         <div class="project-detail-btm">
-                          <div class="project-name-text">YUM YUM</div>
+                          <div class="project-name-text">NOM NOM</div>
                         </div>
                         <div class="project-detail-text">Food &amp; Beverage</div>
                       </div>
@@ -4998,7 +5135,11 @@
             font-weight: 700;
             color: #111;
             margin: 0 0 0.55em;
+            text-transform: uppercase;
             text-wrap: balance;
+          }
+          .section-pricing .pricing-heading .heading-accent {
+            color: #ff5400;
           }
           .section-pricing .pricing-lead {
             margin: 0 auto;
@@ -5304,7 +5445,7 @@
         <div class="section-pricing-inner">
           <div class="pricing-header">
             <div class="pricing-eyebrow">2 spots open this month</div>
-            <h2 class="pricing-heading">Pick a Package With a Price on the Label</h2>
+            <h2 class="pricing-heading">PICK A PACKAGE WITH <span class="heading-accent">A PRICE ON THE LABEL</span></h2>
             <p class="pricing-lead">No “it depends” until you ask for extras. Compare tiers below for logo, branding, website and motion.</p>
           </div>
           <div class="pricing-tabs" role="tablist" aria-label="Choose a service">
@@ -5648,9 +5789,8 @@
         </div>
         <div class="section-services-wrapper">
           <div class="section-projects-header">
-            <div class="section-about-text">Our Services</div>
             <div class="section-heading-wrapper">
-              <h2 class="section-heading">THIS IS OUR THING</h2>
+              <h2 class="section-heading">THIS IS <span class="heading-accent">OUR THING</span></h2>
             </div>
           </div>
           <div class="section-services-body">
@@ -5886,9 +6026,9 @@
       <section class="section-testimonials">
         <div class="section-testimonials-wrapper">
           <div class="section-projects-header">
-            <div class="section-about-text">TESTIMONIALS</div>
+           
             <div class="section-heading-wrapper">
-              <h2 class="section-heading">APPARENTLY, THEY LIKE US</h2>
+              <h2 class="section-heading">APPARENTLY, THEY <span class="heading-accent">LIKE US</span></h2>
             </div>
           </div>
           <div class="section-testimonials-body">
@@ -5907,8 +6047,8 @@
                               srcset="/assets/cdn_prod_website-files_com/6aaad679fdb9d914f7f5203c/6ab3d538dbdbc6a5f1d1d3f4_Rux-p-500.jpg 500w, /assets/cdn_prod_website-files_com/6aaad679fdb9d914f7f5203c/6ab3d538dbdbc6a5f1d1d3f4_Rux.jpg 800w"
                               class="image" /></div>
                           <div class="pfp-info-wrapper">
-                            <div class="testimonial-pfp-name">Ruxandra Florescu</div>
-                            <div class="testimonial-pfp-designation">COO, Dare Digital</div>
+                            <div class="testimonial-pfp-name">Maya Kapoor</div>
+                            <div class="testimonial-pfp-designation">COO, Northstar Digital</div>
                           </div>
                         </div>
                         <p class="testimonial-card-para">They&#x27;re sharp, always responsive, and have a real talent
@@ -5920,7 +6060,7 @@
                   </div>
                   <div role="listitem" class="testimonial-item w-dyn-item">
                     <div class="testimonial-card">
-                      <div class="testimonial-heading">Aarav and Zara truly brought HeyGluco to life</div>
+                      <div class="testimonial-heading">Aarav and Zara truly brought VitaPulse to life</div>
                       <div class="testimonial-card-btm">
                         <div class="testimonial-card-pfp">
                           <div class="testimonial-img-wrap"><img
@@ -5929,8 +6069,8 @@
                               srcset="/assets/cdn_prod_website-files_com/6aaad679fdb9d914f7f5203c/6ab3d1f99d28cf11d2e8f501_luiza-p-500.jpg 500w, /assets/cdn_prod_website-files_com/6aaad679fdb9d914f7f5203c/6ab3d1f99d28cf11d2e8f501_luiza.jpg 800w"
                               class="image" /></div>
                           <div class="pfp-info-wrapper">
-                            <div class="testimonial-pfp-name">Luiza Zamfirescu</div>
-                            <div class="testimonial-pfp-designation">Co-Founder, HeyGluco</div>
+                            <div class="testimonial-pfp-name">Ananya Mehta</div>
+                            <div class="testimonial-pfp-designation">Co-Founder, VitaPulse</div>
                           </div>
                         </div>
                         <p class="testimonial-card-para">Both of them are truly amazing humans, with an incredible
@@ -5954,8 +6094,8 @@
                               srcset="/assets/cdn_prod_website-files_com/6aaad679fdb9d914f7f5203c/6ab3d5ec9cfd634776e95758_Vlad-p-500.jpg 500w, /assets/cdn_prod_website-files_com/6aaad679fdb9d914f7f5203c/6ab3d5ec9cfd634776e95758_Vlad.jpg 800w"
                               class="image" /></div>
                           <div class="pfp-info-wrapper">
-                            <div class="testimonial-pfp-name">Vlad Belcin</div>
-                            <div class="testimonial-pfp-designation">Sr. Copywriter, Dare Digital</div>
+                            <div class="testimonial-pfp-name">Rohan Desai</div>
+                            <div class="testimonial-pfp-designation">Sr. Copywriter, Northstar Digital</div>
                           </div>
                         </div>
                         <p class="testimonial-card-para">Always fun, always insightful, always constructive. It hardly
@@ -5975,8 +6115,8 @@
                               srcset="/assets/cdn_prod_website-files_com/6aaad679fdb9d914f7f5203c/6ab3d72a667c6ab560a03d5b_Ionut-p-500.jpg 500w, /assets/cdn_prod_website-files_com/6aaad679fdb9d914f7f5203c/6ab3d72a667c6ab560a03d5b_Ionut.jpg 800w"
                               class="image" /></div>
                           <div class="pfp-info-wrapper">
-                            <div class="testimonial-pfp-name">Ionut Belet</div>
-                            <div class="testimonial-pfp-designation">Founder, MVP Agency</div>
+                            <div class="testimonial-pfp-name">Kabir Shah</div>
+                            <div class="testimonial-pfp-designation">Founder, Apex Agency</div>
                           </div>
                         </div>
                         <p class="testimonial-card-para">We’ve worked together on two websites and two visual identities
@@ -5996,8 +6136,8 @@
                               srcset="/assets/cdn_prod_website-files_com/6aaad679fdb9d914f7f5203c/6ab3d7f19cfd634776eaf212_Monica-p-500.jpg 500w, /assets/cdn_prod_website-files_com/6aaad679fdb9d914f7f5203c/6ab3d7f19cfd634776eaf212_Monica.jpg 800w"
                               class="image" /></div>
                           <div class="pfp-info-wrapper">
-                            <div class="testimonial-pfp-name">Monica Tantu</div>
-                            <div class="testimonial-pfp-designation">Co-Founder, Merci</div>
+                            <div class="testimonial-pfp-name">Priya Nair</div>
+                            <div class="testimonial-pfp-designation">Co-Founder, Grace</div>
                           </div>
                         </div>
                         <p class="testimonial-card-para">Working with Logo Design on our brand identity was a great
@@ -6510,7 +6650,7 @@
             <div class="section-faq-header">
               <div class="about-text">Frequently Asked Questions</div>
               <div class="section-heading-wrapper">
-                <h2 class="section-heading left-align">THINGS YOU MIGHT ASK</h2>
+                <h2 class="section-heading left-align">THINGS YOU <span class="heading-accent">MIGHT ASK</span></h2>
               </div>
             </div>
             <div class="cat-svg">
@@ -7247,7 +7387,25 @@
           </div>
         </div>
       </section>
-    </main>
+    <section class="ld-contact ld-contact--home" id="contact" aria-label="Contact us"><div class="ld-contact-inner"><div class="ld-contact-left"><div class="ld-contact-kicker">Contact us</div><h2 class="ld-contact-heading">Let's build your <span>brand</span></h2><p class="ld-contact-text">Tell us a little about your business and what you need. We'll get back to you with ideas, a timeline and the right package.</p><div class="ld-contact-info"><div><span>Email us</span><a href="mailto:hello@logodesign.com">hello@logodesign.com</a></div><div><span>Hours</span><p>Mon &ndash; Fri, 9am &ndash; 6pm (EST)</p></div></div></div><div class="ld-contact-card"><form class="ld-contact-form" novalidate>
+  <div class="ld-cf-row">
+    <label class="ld-cf-field"><span>Full name *</span><input type="text" name="name" required autocomplete="name" placeholder="Jane Smith"></label>
+    <label class="ld-cf-field"><span>Email *</span><input type="email" name="email" required autocomplete="email" placeholder="jane@company.com"></label>
+  </div>
+  <div class="ld-cf-row">
+    <label class="ld-cf-field"><span>Phone</span><input type="tel" name="phone" autocomplete="tel" placeholder="+1 555 123 4567"></label>
+    <label class="ld-cf-field"><span>I need</span><select name="service">
+      <option>Logo Design</option><option>3-in-1 Combo</option><option>Branding</option><option>Website</option><option>Video</option><option>Animated Logo</option><option>Something else</option>
+    </select></label>
+  </div>
+  <label class="ld-cf-field"><span>Tell us about your project *</span><textarea name="message" rows="5" required placeholder="Company name, what you do, and what you have in mind..."></textarea></label>
+  <div class="ld-cf-foot">
+    <button type="submit" class="ld-cf-btn">Send message <span aria-hidden="true">&#8599;</span></button>
+    <p class="ld-cf-note">We usually reply within one business day.</p>
+  </div>
+  <p class="ld-cf-status" role="status" aria-live="polite"></p>
+</form></div></div></section>
+</main>
     <footer class="footer">
       <div class="footer-html w-embed w-script"><!-- ======================================================= -->
         <!-- Logo Design — FOOTER SCROLL STRETCH & SETTLE COMPONENT         -->
@@ -7589,7 +7747,7 @@
       <div class="footer-wrapper">
         <div class="footer-top">
           <div class="footer-top-left">
-            <h2 class="footer-heading">Okay, that&#x27;s enough website</h2><a data-wf--cta-btn--variant="base" href="#"
+            <h2 class="footer-heading">Okay, that&#x27;s <span class="heading-accent">enough website</span></h2><a data-wf--cta-btn--variant="base" href="#"
               class="cta-btn w-inline-block">
               <div class="cta-text">Let&#x27;s Talk</div>
               <div class="cta-btn-arrow">
@@ -7753,33 +7911,9 @@
             <div class="footer-top-right-top">
               <div class="footer-links-block">
                 <div class="footer-link-header">Main Menu</div><a href="/work" class="footer-link">Work</a><a
-                  href="/about" class="footer-link">About us</a><a href="/pricing" class="footer-link">Pricing</a>
+                  href="/about" class="footer-link">About us</a><a href="/pricing" class="footer-link">Pricing</a><a href="/contact-us/" class="footer-link">Contact</a>
               </div>
-              <div class="footer-links-block socials"><a href="#" target="_blank" class="social-link w-inline-block">
-                  <div class="footer-link">Instagram</div>
-                  <div class="footer-arrow-svg w-embed"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.48418 7.50615L7.33428 0.656055M2.02545 0.484802L7.33428 0.656055L7.50553 5.96488"
-                        stroke="white" stroke-width="0.96875" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                  </div>
-                </a><a href="#" class="social-link w-inline-block">
-                  <div class="footer-link">Behance</div>
-                  <div class="footer-arrow-svg w-embed"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.48418 7.50615L7.33428 0.656055M2.02545 0.484802L7.33428 0.656055L7.50553 5.96488"
-                        stroke="white" stroke-width="0.96875" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                  </div>
-                </a><a href="#" target="_blank" class="social-link w-inline-block">
-                  <div class="footer-link">LinkedIn</div>
-                  <div class="footer-arrow-svg w-embed"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.48418 7.50615L7.33428 0.656055M2.02545 0.484802L7.33428 0.656055L7.50553 5.96488"
-                        stroke="white" stroke-width="0.96875" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                  </div>
-                </a></div>
+              <div class="footer-links-block socials legal"><a href="/privacy-policy/" class="social-link w-inline-block"><div class="footer-link">Privacy Policy</div><div class="footer-arrow-svg w-embed"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.5 8.5 8.5 1.5M8.5 1.5H3M8.5 1.5V7" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div></a><a href="/terms-and-conditions/" class="social-link w-inline-block"><div class="footer-link">Terms &amp; Conditions</div><div class="footer-arrow-svg w-embed"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.5 8.5 8.5 1.5M8.5 1.5H3M8.5 1.5V7" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div></a></div>
             </div>
           </div>
         </div>
@@ -8062,6 +8196,6 @@
       }
     })();
   </script>
-</body>
+<script src="/assets/site-enhance.js" defer></script></body>
 
 </html>

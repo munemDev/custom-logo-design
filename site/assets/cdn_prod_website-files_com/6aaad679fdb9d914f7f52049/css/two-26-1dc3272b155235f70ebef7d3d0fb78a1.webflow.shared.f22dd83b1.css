@@ -7670,3 +7670,33 @@ textarea.w-input, textarea.w-select {
     grid-template-columns: 1fr;
   }
 }
+
+/* === Footer: compact height + email beside heading === */
+.footer {
+  height: auto !important;
+  min-height: 0 !important;
+}
+.footer-wrapper {
+  height: auto !important;
+  grid-row-gap: 2.5em !important;
+  padding-top: 2.5em !important;
+}
+@media screen and (min-width: 768px) {
+  .footer-top-left {
+    display: grid !important;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    column-gap: 3.5em;
+    row-gap: 1.25em;
+    align-items: start;
+    max-width: 62% !important;
+  }
+  .footer-top-left .footer-heading { grid-column: 1; grid-row: 1; }
+  .footer-top-left .cta-btn { grid-column: 1; grid-row: 2; justify-self: start; }
+  .footer-top-left .footer-links-block.email {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: start;
+    padding-top: 0.9em !important;
+  }
+}
