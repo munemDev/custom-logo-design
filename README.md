@@ -9,7 +9,6 @@ Local static site for Logo Design (formerly mirrored from an older studio templa
 npm start
 ```
 
-Open http://localhost:3000
 
 ## Pages (13) — all return 200
 
