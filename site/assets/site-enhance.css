@@ -278,8 +278,8 @@ form.hero-search-wrap {
   width: 2.35em;
   height: 2.35em;
   border-radius: 50%;
-  background: #ffe5d6;
-  color: #ff5400;
+  background: #ff5400;
+  color: #ffffff;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -333,7 +333,7 @@ form.hero-search-wrap {
   font-weight: 500;
   line-height: 1;
   border-radius: 100px;
-  padding: 0.6rem 1.6rem;
+  padding:0.6rem 0.6rem 0.6rem 1.6rem;
   margin-right: 0;
   position: relative;
   overflow: hidden;
