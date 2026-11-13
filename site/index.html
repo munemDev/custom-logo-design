@@ -49,7 +49,7 @@
       }
     })();
   </script>
-  <link rel="stylesheet" href="/assets/site-enhance.css?v=hero-circle-1" />
+  <link rel="stylesheet" href="/assets/site-enhance.css?v=showcase-nosize-1" />
 </head>
 
 <body class="body">
@@ -2248,6 +2248,7 @@
             <div class="hero-pill three">
               <div class="hero-pill-text">No funny business</div>
             </div>
+            <p class="hero-support">Custom logos and brand systems that look sharp, feel intentional, and actually work in the real world.</p>
             <form class="hero-search-wrap" id="hero-brief-form" action="/brief/" method="get"><span
                 class="hero-search-pencil" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 256 256" fill="currentColor" aria-hidden="true">
@@ -2535,7 +2536,7 @@
                         }
 
                         // -------------------------------------------------------------
-                        // 6. Render Loop (Glitch-Free Seamless Wrap & Proximity Scale)
+                        // 6. Render Loop (Glitch-Free Seamless Wrap)
                         // -------------------------------------------------------------
                         function tick() {
                           currentDirection += (targetDirection - currentDirection) * 0.06;
@@ -2556,26 +2557,6 @@
 
                           // Apply track position with hardware acceleration
                           gsap.set(track, { x: currentX, force3D: true });
-
-                          // Center Proximity Inverse Scale: 0.95 at center -> 1 at sides
-                          const wrapperRect = wrapper.getBoundingClientRect();
-                          const wrapperCenter = wrapperRect.left + wrapperRect.width / 2;
-                          const halfWidth = wrapperRect.width * 0.45 || 400;
-
-                          allSlides.forEach((slide) => {
-                            const slideRect = slide.getBoundingClientRect();
-                            const slideCenter = slideRect.left + slideRect.width / 2;
-
-                            const distFromCenter = Math.abs(slideCenter - wrapperCenter);
-                            const normDist = Math.min(1, distFromCenter / halfWidth);
-
-                            const targetScale = 0.95 + (1 - 0.95) * normDist;
-
-                            gsap.set(slide, {
-                              scale: targetScale,
-                              transformOrigin: "center center",
-                            });
-                          });
                         }
 
                         gsap.ticker.add(tick);
@@ -2592,26 +2573,42 @@
               </div>
               <div class="section-slider-wrapper">
                 <div class="showcase-slider">
-                  <div class="showcase-slide"><img src="/assets/custom/slider/slide-0.jpg?v=5" loading="lazy"
+                  <div class="showcase-slide"><img src="/assets/custom/slider/slide-0.jpg?v=6" loading="lazy"
                       alt="Tropi drink can" class="showcase-slide-img" /></div>
-                  <div class="showcase-slide"><img src="/assets/custom/slider/slide-12.jpg?v=5" loading="lazy"
-                      alt="Buzzy logo design" class="showcase-slide-img" /></div>
+                  <div class="showcase-slide"><img src="/assets/custom/slider/slide-18.jpg?v=1" loading="lazy"
+                      alt="Ember coffee packaging" class="showcase-slide-img" /></div>
+                  <div class="showcase-slide"><img src="/assets/custom/slider/slide-12.jpg?v=6" loading="lazy"
+                      alt="Buzzy honey packaging" class="showcase-slide-img" /></div>
+                  <div class="showcase-slide"><img src="/assets/custom/slider/slide-19.jpg?v=1" loading="lazy"
+                      alt="Lumen serum bottle" class="showcase-slide-img" /></div>
                   <div class="showcase-slide"><img src="/assets/custom/slider/slide-15.jpg?v=5" loading="lazy"
                       alt="Leafy plant shop website" class="showcase-slide-img" /></div>
+                  <div class="showcase-slide"><img src="/assets/custom/slider/slide-21.jpg?v=1" loading="lazy"
+                      alt="Crave burger branding" class="showcase-slide-img" /></div>
                   <div class="showcase-slide"><img src="/assets/custom/slider/slide-1.jpg?v=5" loading="lazy"
                       alt="Nova serum bottle" class="showcase-slide-img" /></div>
+                  <div class="showcase-slide"><img src="/assets/custom/slider/slide-20.jpg?v=2" loading="lazy"
+                      alt="Drift brand packaging" class="showcase-slide-img" /></div>
                   <div class="showcase-slide"><img src="/assets/custom/slider/slide-2.jpg?v=5" loading="lazy"
                       alt="Kiko logo design" class="showcase-slide-img" /></div>
-                  <div class="showcase-slide"><img src="/assets/custom/slider/slide-16.jpg?v=12" loading="lazy"
-                      alt="Pulse festival website" class="showcase-slide-img" /></div>
-                  <div class="showcase-slide"><img src="/assets/custom/slider/slide-3.jpg?v=5" loading="lazy"
-                      alt="Sunny Squeeze packaging" class="showcase-slide-img" /></div>
+                  <div class="showcase-slide"><img src="/assets/custom/slider/slide-16.jpg?v=14" loading="lazy"
+                      alt="Pulse festival app" class="showcase-slide-img" /></div>
+                  <div class="showcase-slide"><img src="/assets/custom/slider/slide-22.jpg?v=1" loading="lazy"
+                      alt="Aero sneaker campaign" class="showcase-slide-img" /></div>
+                  <div class="showcase-slide"><img src="/assets/custom/slider/slide-24.jpg?v=1" loading="lazy"
+                      alt="Studio website mockup" class="showcase-slide-img" /></div>
                   <div class="showcase-slide"><img src="/assets/custom/slider/slide-13.jpg?v=5" loading="lazy"
                       alt="Surfio logo sign" class="showcase-slide-img" /></div>
-                  <div class="showcase-slide"><img src="/assets/custom/slider/slide-7.jpg?v=5" loading="lazy"
-                      alt="Northline website" class="showcase-slide-img" /></div>
+                  <div class="showcase-slide"><img src="/assets/custom/slider/slide-11.jpg?v=7" loading="lazy"
+                      alt="Fizzy can packaging" class="showcase-slide-img" /></div>
+                  <div class="showcase-slide"><img src="/assets/custom/slider/slide-23.jpg?v=1" loading="lazy"
+                      alt="Bloom florist branding" class="showcase-slide-img" /></div>
+                  <div class="showcase-slide"><img src="/assets/custom/slider/slide-7.jpg?v=6" loading="lazy"
+                      alt="Northline logistics website" class="showcase-slide-img" /></div>
                   <div class="showcase-slide"><img src="/assets/custom/slider/slide-4.jpg?v=5" loading="lazy"
                       alt="Loop sneaker campaign" class="showcase-slide-img" /></div>
+                  <div class="showcase-slide"><img src="/assets/custom/slider/slide-25.jpg?v=1" loading="lazy"
+                      alt="Mint logo design" class="showcase-slide-img" /></div>
                   <div class="showcase-slide"><img src="/assets/custom/slider/slide-17.jpg?v=5" loading="lazy"
                       alt="Happy Hour branding" class="showcase-slide-img" /></div>
                   <div class="showcase-slide"><img src="/assets/custom/slider/slide-14.jpg?v=12" loading="lazy"
@@ -2624,10 +2621,10 @@
                       alt="Pop candy merch" class="showcase-slide-img" /></div>
                   <div class="showcase-slide"><img src="/assets/custom/slider/slide-10.jpg?v=5" loading="lazy"
                       alt="Selene spa logo" class="showcase-slide-img" /></div>
+                  <div class="showcase-slide"><img src="/assets/custom/slider/slide-3.jpg?v=5" loading="lazy"
+                      alt="Sunny Squeeze packaging" class="showcase-slide-img" /></div>
                   <div class="showcase-slide"><img src="/assets/custom/slider/slide-9.jpg?v=5" loading="lazy"
                       alt="Melt ice cream storefront" class="showcase-slide-img" /></div>
-                  <div class="showcase-slide"><img src="/assets/custom/slider/slide-11.jpg?v=5" loading="lazy"
-                      alt="Fizzy can packaging" class="showcase-slide-img" /></div>
                 </div>
               </div>
             </section>
@@ -3380,8 +3377,21 @@
                 const MASK_PATH_D =
                   "M25.007 729.507C25.007 729.507 136.507 1065.7 290.007 969.007C506.711 832.495 -164.765 175.16 89.5069 44.5066C315.057 -71.3883 462.507 559.507 615.507 515.007C768.507 470.507 615.507 25.0068 615.507 25.0068";
                 const TARGET_STROKE_WIDTH = 1200;
+                const hoverRegistry = [];
+                let activeHoverCard = null;
+
+                function deactivateOtherHovers(exceptCard) {
+                  hoverRegistry.forEach((entry) => {
+                    if (entry.card === exceptCard) return;
+                    entry.card.classList.remove("is-hover-active");
+                    entry.tl.timeScale(1.4).reverse();
+                  });
+                }
 
                 cards.forEach((card, index) => {
+                  if (card.dataset.hoverBound === "1") return;
+                  card.dataset.hoverBound = "1";
+
                   const imgWrapper = card.querySelector(".project-card-img-wrapper");
                   if (!imgWrapper) return;
 
@@ -3410,13 +3420,14 @@
                     svgContainer.style.height = "100%";
                     svgContainer.style.pointerEvents = "none";
                     svgContainer.style.zIndex = "2";
+                    svgContainer.style.overflow = "hidden";
 
                     const innerSvg = svgContainer.querySelector("svg");
                     if (innerSvg) {
                       innerSvg.style.width = "100%";
                       innerSvg.style.height = "100%";
                       innerSvg.style.display = "block";
-                      innerSvg.style.overflow = "visible";
+                      innerSvg.style.overflow = "hidden";
                       if (!innerSvg.getAttribute("viewBox")) {
                         innerSvg.setAttribute("viewBox", "0 0 709 1012");
                       }
@@ -3445,7 +3456,7 @@
                     // Hide original HTML <img> so it only displays inside our hardware-accelerated SVG mask
                     hoverImg.style.display = "none";
 
-                    const maskId = `project-mask-${index}`;
+                    const maskId = `project-mask-${index}-${Math.random().toString(36).slice(2, 9)}`;
 
                     // Create SVG element with Mask & Clipped Image
                     const maskSvg = document.createElementNS(
@@ -3462,7 +3473,7 @@
                     maskSvg.style.height = "100%";
                     maskSvg.style.pointerEvents = "none";
                     maskSvg.style.zIndex = "3";
-                    maskSvg.style.overflow = "visible";
+                    maskSvg.style.overflow = "hidden";
 
                     maskSvg.innerHTML = `
             <defs>
@@ -3618,12 +3629,20 @@
                       );
                   }
 
-                  // 5. Bind Hover Listeners
-                  card.addEventListener("mouseenter", () => {
+                  // 5. Bind Hover Listeners — only the hovered card stays active
+                  hoverRegistry.push({ card, tl: hoverTl });
+
+                  card.addEventListener("pointerenter", () => {
+                    if (activeHoverCard === card) return;
+                    activeHoverCard = card;
+                    deactivateOtherHovers(card);
+                    card.classList.add("is-hover-active");
                     hoverTl.timeScale(1).play();
                   });
 
-                  card.addEventListener("mouseleave", () => {
+                  card.addEventListener("pointerleave", () => {
+                    if (activeHoverCard === card) activeHoverCard = null;
+                    card.classList.remove("is-hover-active");
                     hoverTl.timeScale(1.3).reverse();
                   });
                 });

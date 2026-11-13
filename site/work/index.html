@@ -25,7 +25,7 @@
 })();
 </script>
   
-<link rel="stylesheet" href="/assets/site-enhance.css?v=onefile-1" /></head><body class="body"><div class="code-embed-10 w-embed w-script"><style>
+<link rel="stylesheet" href="/assets/site-enhance.css?v=scrollbar-1" /></head><body class="body"><div class="code-embed-10 w-embed w-script"><style>
   /* ------------------------- Scaling System -------------------------  */
 
   /* Desktop */
@@ -3528,8 +3528,21 @@
       const MASK_PATH_D =
         "M25.007 729.507C25.007 729.507 136.507 1065.7 290.007 969.007C506.711 832.495 -164.765 175.16 89.5069 44.5066C315.057 -71.3883 462.507 559.507 615.507 515.007C768.507 470.507 615.507 25.0068 615.507 25.0068";
       const TARGET_STROKE_WIDTH = 1200;
+      const hoverRegistry = [];
+      let activeHoverCard = null;
+
+      function deactivateOtherHovers(exceptCard) {
+        hoverRegistry.forEach((entry) => {
+          if (entry.card === exceptCard) return;
+          entry.card.classList.remove("is-hover-active");
+          entry.tl.timeScale(1.4).reverse();
+        });
+      }
 
       cards.forEach((card, index) => {
+        if (card.dataset.hoverBound === "1") return;
+        card.dataset.hoverBound = "1";
+
         const imgWrapper = card.querySelector(".project-card-img-wrapper");
         if (!imgWrapper) return;
 
@@ -3558,13 +3571,14 @@
           svgContainer.style.height = "100%";
           svgContainer.style.pointerEvents = "none";
           svgContainer.style.zIndex = "2";
+          svgContainer.style.overflow = "hidden";
 
           const innerSvg = svgContainer.querySelector("svg");
           if (innerSvg) {
             innerSvg.style.width = "100%";
             innerSvg.style.height = "100%";
             innerSvg.style.display = "block";
-            innerSvg.style.overflow = "visible";
+            innerSvg.style.overflow = "hidden";
             if (!innerSvg.getAttribute("viewBox")) {
               innerSvg.setAttribute("viewBox", "0 0 709 1012");
             }
@@ -3593,7 +3607,7 @@
           // Hide original HTML <img> so it only displays inside our hardware-accelerated SVG mask
           hoverImg.style.display = "none";
 
-          const maskId = `project-mask-${index}`;
+          const maskId = `project-mask-${index}-${Math.random().toString(36).slice(2, 9)}`;
 
           // Create SVG element with Mask & Clipped Image
           const maskSvg = document.createElementNS(
@@ -3610,7 +3624,7 @@
           maskSvg.style.height = "100%";
           maskSvg.style.pointerEvents = "none";
           maskSvg.style.zIndex = "3";
-          maskSvg.style.overflow = "visible";
+          maskSvg.style.overflow = "hidden";
 
           maskSvg.innerHTML = `
             <defs>
@@ -3766,12 +3780,20 @@
             );
         }
 
-        // 5. Bind Hover Listeners
-        card.addEventListener("mouseenter", () => {
+        // 5. Bind Hover Listeners — only the hovered card stays active
+        hoverRegistry.push({ card, tl: hoverTl });
+
+        card.addEventListener("pointerenter", () => {
+          if (activeHoverCard === card) return;
+          activeHoverCard = card;
+          deactivateOtherHovers(card);
+          card.classList.add("is-hover-active");
           hoverTl.timeScale(1).play();
         });
 
-        card.addEventListener("mouseleave", () => {
+        card.addEventListener("pointerleave", () => {
+          if (activeHoverCard === card) activeHoverCard = null;
+          card.classList.remove("is-hover-active");
           hoverTl.timeScale(1.3).reverse();
         });
       });
