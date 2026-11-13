@@ -2,3 +2,9 @@ node_modules/
 .DS_Store
 *.log
 site-deploy.zip
+.netlify/
+.vercel/
+__pycache__/
+*.orig.jpg
+*-report.json
+*-report.*.json
