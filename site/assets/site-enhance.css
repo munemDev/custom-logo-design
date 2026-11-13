@@ -263,9 +263,12 @@
 @media screen and (max-width: 991px) { .ld-contact-inner { grid-template-columns: 1fr; } }
 @media screen and (max-width: 600px) { .ld-cf-row { grid-template-columns: 1fr; } .ld-cf-btn { width: 100%; justify-content: center; } }
 
-/* Homepage: marquee section matches the "A bit about us" section */
-.section-slider-showcase.hero-inline-showcase,
+/* About keeps peach; hero inline slider stays transparent (no flat peach strip) */
 .section-about { background-color: #fae3e2 !important; }
+.section-slider-showcase.hero-inline-showcase {
+  background: transparent !important;
+  background-color: transparent !important;
+}
 @media screen and (max-width: 767px) {
   .ld-menu .ld-menu-ctas { display: grid; gap: .75rem; margin-top: 1.75rem; }
   .ld-menu .ld-menu-ctas .ld-menu-cta { margin-top: 0; }
@@ -589,15 +592,23 @@ form.hero-search-wrap {
       width: 100%;
       max-width: 100%;
       margin-top: 1.5em;
-      margin-bottom: 2em;
+      margin-bottom: 0;
       position: relative;
-      z-index: 5
+      z-index: 5;
+      background: transparent !important;
     }
 
     .hero-banner-showcase .section-slider-showcase.hero-inline-showcase {
       padding-top: 0 !important;
-      padding-bottom: 2em !important;
-      width: 100%
+      padding-bottom: 0 !important;
+      width: 100%;
+      background: transparent !important;
+    }
+
+    .hero-banner-showcase .section-slider-wrapper,
+    .hero-banner-showcase .showcase-slider,
+    .hero-banner-showcase .showcase-html {
+      background: transparent !important;
     }
 
     .hero-banner-showcase .showcase-slide {
