@@ -8,7 +8,6 @@ Static marketing site. Publish folder: `site/`.
 npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
 
 ## Deploy (Vercel)
 
